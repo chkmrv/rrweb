@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+#parse ($init)
+<html class="$root_css_class" dir="#language ("lang.dir")" lang="$w3c_language_id">
+<head>
+	<title>$the_title</title>
+
+	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script type="text/javascript" defer="" async="" src="$javascript_folder/piwik.js"></script>
+	<script async="" src="$javascript_folder/analytics.js"></script>
+
+	<script type="text/javascript" src="$javascript_folder/core.js"></script>
+	<script type="text/javascript" src="$javascript_folder/core_ajax.js"></script>
+	<script type="text/javascript" src="$javascript_folder/session.js"></script>
+
+	<script type="text/javascript" src="$javascript_folder/lodash.js"></script>
+	<script type="text/javascript" src="$javascript_folder/modernizr.min.js"></script>
+	<script type="text/javascript" src="$javascript_folder/masonry.min.js"></script>
+
+	<script type="text/javascript" src="$javascript_folder/jquery.cookie.js"></script>
+	<script type="text/javascript" src="$javascript_folder/chosen.jquery.min.js"></script>
+	<script type="text/javascript" src="$javascript_folder/global.js"></script>
+	<script type="text/javascript" src="$javascript_folder/index.js"></script>
+	<script type="text/javascript" src="$javascript_folder/script.js"></script>
+	<script type="text/javascript" src="$javascript_folder/bootstrap.min.js"></script>
+	<script type="text/javascript" src="$javascript_folder/babel-core.min.js"></script>
+	
+	$theme.include($top_head_include)
+</head>
+<body class="$css_class">
+	<a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a>
+	$theme.include($body_top_include)
+	#dockbar()
+	#set($vocLocalService = $serviceLocator.findService("com.liferay.portlet.asset.service.AssetVocabularyLocalService"))
+	#set($voc = $vocLocalService.getVocabulary($getterUtil.getLong(25917)))
+	#set($categories = $voc.getCategories())
+	<div id="page_wrap" class="css_main">
+		<div class="width_fix">
+			#if ($selectable)
+				$theme.include($content_include)
+			#else
+				$portletDisplay.recycle()
+				$portletDisplay.setTitle($the_title)
+				$theme.wrapPortlet("portlet.vm", $content_include)
+			#end
+		</div>
+	</div>
+	$theme.include($body_bottom_include)
+	$theme.include($bottom_include)
+</body>
+
+</html>

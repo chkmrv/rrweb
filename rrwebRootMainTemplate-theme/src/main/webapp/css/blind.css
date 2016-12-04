@@ -1,0 +1,5469 @@
+@charset "utf-8";
+/* ==========================================================================
+   set fonts
+   ========================================================================== */
+/**
+* Font Weights
+* 100 = thin
+* 200 = extra-light
+* 300 = light
+* 400 = normal, book, regular
+* 500 = medium
+* 600 = demi-bold
+* 700 = bold
+* 800 = heavy
+* 900 = black
+*/
+
+/* ==========================================================================
+   css3 animations
+   ========================================================================== */
+/**
+ * opacityPulse from 1 to .8
+ */
+@-webkit-keyframes opacityPulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacityPulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* ==========================================================================
+   base styles: opinionated defaults
+   ========================================================================== */
+/* ==========================================================================
+   тут пошли стили секций сайта
+   ========================================================================== */
+/* --------------------------------------------------------------------------
+	 Chrome Frame prompt
+	 -------------------------------------------------------------------------- */
+.chromeframe {
+  margin: 0;
+  background: #ccc;
+  color: #000;
+  padding: .5em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body.blind {
+  height: 100%;
+  min-height: 100%;
+  font: normal 18px/1.5 Arial, Helvetica sans-serif;
+}
+body.blind.sans_serif {
+  font-family: Arial, Helvetica sans-serif;
+}
+body.blind.serif {
+  font-family: "Times New Roman", Times, serif;
+}
+body.blind.standart_interlinear {
+  letter-spacing: 0;
+}
+body.blind.middle_interlinear {
+  letter-spacing: 0.1em;
+}
+body.blind.big_interlinear {
+  letter-spacing: 0.3em;
+}
+
+*:focus {
+  outline: none;
+}
+
+iframe {
+  border: none;
+  display: block;
+}
+
+::-moz-selection {
+  background: #9dd1ff;
+  text-shadow: none;
+}
+
+::selection {
+  background: #9dd1ff;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #000;
+  margin: 1em 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a img {
+  border: none;
+}
+
+aside, nav, footer, header, section, article {
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+ol, ul {
+  margin: 0 0 1em 1.25em;
+}
+
+ol li, ul li {
+  margin: 0 0 0.5em 0;
+}
+
+nav ul, nav ol, nav li {
+  margin: 0;
+  list-style: none;
+}
+
+.css_blind {
+  /* Hidden from the visually impaired */
+  /* For js */
+}
+.css_blind .parallax, .css_blind #top_lang, .css_blind header, .css_blind #foot_menu, .css_blind #partner_links, .css_blind #map_container, .css_blind #main_contact {
+  display: none;
+}
+.css_blind .js-slideBox, .css_blind .js-openBox, .css_blind .js-window, .css_blind .vodeo_modal {
+  display: none;
+}
+
+/* Grid */
+#page_wrap.css_blind {
+  min-height: 100%;
+  overflow: hidden;
+  margin: 0 0 -490px 0;
+  padding: 0 0 550px 0;
+  position: relative;
+  z-index: 1;
+  min-width: 1000px;
+}
+.fontsize_small #page_wrap.css_blind {
+  font-size: 18px;
+}
+.fontsize_middle #page_wrap.css_blind {
+  font-size: 21px;
+}
+.fontsize_big #page_wrap.css_blind {
+  font-size: 24px;
+}
+.color_white #page_wrap.css_blind {
+  background: #fff;
+  color: #000;
+}
+.color_black #page_wrap.css_blind {
+  color: #fff;
+  background: #000;
+}
+.color_blue #page_wrap.css_blind {
+  background: #9dd1ff;
+  color: #063462;
+}
+
+#page {
+  position: relative;
+  z-index: 1;
+}
+
+/* Footer */
+#foot_wrap.css_blind {
+  position: relative;
+  z-index: 1;
+  height: 490px;
+  margin: -490px 0 0 0;
+}
+#foot_wrap.css_blind .main_menu {
+  border-bottom: none !important;
+}
+#foot_wrap.css_blind .main_menu .submenu_level1 {
+  top: auto;
+  bottom: 100%;
+}
+#foot_wrap.css_blind .footer {
+  padding: 30px 15px;
+  position: relative;
+}
+#foot_wrap.css_blind .footer .soc_block, #foot_wrap.css_blind .footer #copy, #foot_wrap.css_blind .footer .useful_links {
+  display: none;
+}
+#foot_wrap.css_blind .footer #short_footer {
+  overflow: hidden;
+  font: normal 20px/1.4 Arial, Helvetica sans-serif;
+}
+#foot_wrap.css_blind .footer .site_map {
+  float: left;
+}
+#foot_wrap.css_blind .footer .rss {
+  float: right;
+}
+#foot_wrap.css_blind .footer .tech {
+  margin: 0 170px 0 140px;
+  text-align: center;
+}
+.color_white #foot_wrap.css_blind .footer {
+  background: #000;
+  color: #fff;
+}
+.color_black #foot_wrap.css_blind .footer {
+  background: #000;
+  color: #fff;
+}
+.color_blue #foot_wrap.css_blind .footer {
+  background: #063462;
+  color: #9dd1ff;
+}
+#foot_wrap.css_blind .settings_block {
+  bottom: 140px;
+  top: auto;
+}
+#foot_wrap.css_blind #foot_panel {
+  padding: 0 15px;
+}
+#foot_wrap.css_blind #foot_panel .foot_space {
+  padding: 25px 0;
+}
+#foot_wrap.css_blind #foot_panel .top_location {
+  margin: 0 45px;
+}
+#foot_wrap.css_blind #foot_panel .kabinet_link {
+  display: inline-block;
+  font: bold 20px/1 Arial, Helvetica sans-serif;
+  text-decoration: none;
+}
+#foot_wrap.css_blind #foot_panel .kabinet_link img {
+  display: none;
+}
+#foot_wrap.css_blind #foot_panel .kabinet_link div {
+  display: inline-block;
+  vertical-align: middle;
+}
+#foot_wrap.css_blind #foot_panel .kabinet_link .img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 31px;
+  margin: 0 10px 0 0;
+}
+.color_white #foot_wrap.css_blind #foot_panel .kabinet_link .img {
+  background: transparent url(../img/sprite-blind.png) -232px -80px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black #foot_wrap.css_blind #foot_panel .kabinet_link .img {
+  background: transparent url(../img/sprite-blind.png) -232px -132px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue #foot_wrap.css_blind #foot_panel .kabinet_link .img {
+  background: transparent url(../img/sprite-blind.png) -230px -186px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+#foot_wrap.css_blind #foot_panel .foot_search_link {
+  display: inline-block;
+  font: bold 20px/1 Arial, Helvetica sans-serif;
+  text-decoration: none;
+  margin: 0 0 0 25px;
+}
+#foot_wrap.css_blind #foot_panel .foot_search_link:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 31px;
+  height: 31px;
+  margin: 0 5px 0 0;
+}
+.color_white #foot_wrap.css_blind #foot_panel .foot_search_link:before {
+  background: transparent url(../img/sprite-blind.png) -269px -80px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black #foot_wrap.css_blind #foot_panel .foot_search_link:before {
+  background: transparent url(../img/sprite-blind.png) -269px -132px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue #foot_wrap.css_blind #foot_panel .foot_search_link:before {
+  background: transparent url(../img/sprite-blind.png) -269px -186px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_white #foot_wrap.css_blind #foot_panel {
+  color: #000;
+}
+.color_black #foot_wrap.css_blind #foot_panel {
+  color: #fff;
+}
+.color_blue #foot_wrap.css_blind #foot_panel {
+  color: #063462;
+}
+
+#scroll_top {
+  display: inline-block;
+  padding: 0 30px 0 0;
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  left: 15px;
+  bottom: 470px;
+  cursor: pointer;
+}
+#scroll_top span {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.color_white #scroll_top {
+  color: #000;
+  background: transparent url(../img/tri.png) 90px 9px no-repeat;
+}
+.color_black #scroll_top {
+  color: #fff;
+  background: transparent url(../img/tri.png) 90px -23px no-repeat;
+}
+.color_blue #scroll_top {
+  color: #063462;
+  background: transparent url(../img/tri.png) 90px -56px no-repeat;
+}
+
+.css_blind {
+  /* Top panel */
+  /* Header */
+  /* Main menu */
+  /* Titles */
+  /* Forms */
+  /* Forms */
+  /* Buttons */
+  /* Search */
+  /* Datepiker */
+  /* Blocks */
+  /* Tables */
+  /* Modal */
+  /* Index page */
+  /* About */
+  /* Article */
+  /* Persons */
+  /* Structure */
+  /* Feedback */
+  /* Fizlica */
+  /* Electron service */
+  /* Doing */
+  /* Press center */
+  /* Open service */
+}
+.css_blind .width_fix {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+.css_blind .blind_panel {
+  height: 135px;
+  background: #e1e1e1;
+  font: bold 20px/1.5 Arial, Helvetica sans-serif;
+}
+.css_blind .blind_panel .width_fix {
+  padding: 15px;
+}
+.color_white .css_blind .blind_panel {
+  background: #e1e1e1;
+  color: #000;
+}
+.color_black .css_blind .blind_panel {
+  color: #fff;
+  background: #000;
+}
+.color_blue .css_blind .blind_panel {
+  background: #9dd1ff;
+  color: #063462;
+}
+.css_blind .to_main_version {
+  display: inline-block;
+  vertical-align: middle;
+  width: 170px;
+  text-align: center;
+  text-decoration: none;
+}
+.middle_interlinear .css_blind .to_main_version, .big_interlinear .css_blind .to_main_version {
+  letter-spacing: 0;
+}
+.css_blind .to_main_version span {
+  display: inline-block;
+  width: 75px;
+  height: 47px;
+}
+.color_white .css_blind .to_main_version span {
+  background: transparent url(../img/sprite-blind.png) 0 -80px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black .css_blind .to_main_version span {
+  background: transparent url(../img/sprite-blind.png) 0 -133px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue .css_blind .to_main_version span {
+  background: transparent url(../img/sprite-blind.png) 0 -184px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.css_blind .font_toggle {
+  width: 140px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 35px;
+}
+.middle_interlinear .css_blind .font_toggle, .big_interlinear .css_blind .font_toggle {
+  letter-spacing: 0;
+}
+.css_blind .font_toggle span {
+  display: inline-block;
+  vertical-align: baseline;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.css_blind .font_toggle span:hover, .css_blind .font_toggle span.selected {
+  text-decoration: underline;
+}
+.css_blind .font_toggle .a_small {
+  font: bold 30px/1 Arial, Helvetica sans-serif;
+}
+.css_blind .font_toggle .a_normal {
+  font: bold 45px/1 Arial, Helvetica sans-serif;
+}
+.css_blind .font_toggle .a_big {
+  font: bold 60px/1 Arial, Helvetica sans-serif;
+}
+.css_blind .color_toggle {
+  display: inline-block;
+  vertical-align: middle;
+}
+.middle_interlinear .css_blind .color_toggle, .big_interlinear .css_blind .color_toggle {
+  letter-spacing: 0;
+}
+.css_blind .color_toggle span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 71px;
+  height: 71px;
+  cursor: pointer;
+  margin: 0 3px;
+  position: relative;
+}
+.css_blind .color_toggle span:hover:after, .css_blind .color_toggle span.selected:after {
+  content: '\25B2';
+  position: absolute;
+  top: 70px;
+  left: 25px;
+}
+.css_blind .color_toggle .white {
+  background: transparent url(../img/sprite-blind.png) 0 0 no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.css_blind .color_toggle .black {
+  background: transparent url(../img/sprite-blind.png) -77px 0 no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.css_blind .color_toggle .blue {
+  background: transparent url(../img/sprite-blind.png) -155px 0 no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.css_blind .image_toggle {
+  display: inline-block;
+  vertical-align: middle;
+  width: 130px;
+  margin: 0 35px;
+  text-align: center;
+}
+.middle_interlinear .css_blind .image_toggle, .big_interlinear .css_blind .image_toggle {
+  letter-spacing: 0;
+}
+.css_blind .image_toggle div {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px;
+  text-transform: uppercase;
+}
+.css_blind .image_toggle div span {
+  display: block;
+  width: 42px;
+  height: 42px;
+  margin: 5px auto;
+}
+.color_white .css_blind .image_toggle div span {
+  background: transparent url(../img/sprite-blind.png) -85px -80px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black .css_blind .image_toggle div span {
+  background: transparent url(../img/sprite-blind.png) -85px -132px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue .css_blind .image_toggle div span {
+  background: transparent url(../img/sprite-blind.png) -85px -185px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_white .css_blind .image_toggle div.selected span {
+  background: transparent url(../img/sprite-blind.png) -133px -80px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black .css_blind .image_toggle div.selected span {
+  background: transparent url(../img/sprite-blind.png) -133px -132px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue .css_blind .image_toggle div.selected span {
+  background: transparent url(../img/sprite-blind.png) -133px -185px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.css_blind .settings_ico {
+  display: inline-block;
+  float: right;
+  text-align: center;
+  cursor: pointer;
+}
+.middle_interlinear .css_blind .settings_ico, .big_interlinear .css_blind .settings_ico {
+  letter-spacing: 0;
+}
+.css_blind .settings_ico:after {
+  content: '';
+  display: block;
+  width: 42px;
+  height: 42px;
+  margin: 3px auto 0 auto;
+}
+.color_white .css_blind .settings_ico:after {
+  background: transparent url(../img/sprite-blind.png) -183px -80px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black .css_blind .settings_ico:after {
+  background: transparent url(../img/sprite-blind.png) -183px -132px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue .css_blind .settings_ico:after {
+  background: transparent url(../img/sprite-blind.png) -183px -183px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.css_blind .settings_block {
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 135px;
+  z-index: 100;
+  padding: 30px 50px;
+  font: normal 24px/1.2 Arial, Helvetica sans-serif;
+}
+.color_white .css_blind .settings_block {
+  background: #fff;
+  border: 2px solid #000;
+}
+.color_black .css_blind .settings_block {
+  background: #000;
+  border: 2px solid #fff;
+}
+.color_blue .css_blind .settings_block {
+  background: #9dd1ff;
+  border: 2px solid #063462;
+}
+.css_blind .settings_block .set_title {
+  font: bold 27px/1 Arial, Helvetica sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 40px 0;
+}
+.css_blind .settings_block .set {
+  margin: 0 0 10px 0;
+}
+.css_blind .settings_block .set .button_link {
+  margin: 0 15px 30px 0;
+}
+.css_blind .settings_block .button_link {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 35px;
+  cursor: pointer;
+  margin: 0 7px;
+}
+.css_blind .settings_block .button_link[data-class="sans_serif"] {
+  font: normal 24px/1.2 Arial, Helvetica sans-serif;
+}
+.css_blind .settings_block .button_link[data-class="serif"] {
+  font: normal 24px/1.2 "Times New Roman", Times, serif;
+}
+.color_white .css_blind .settings_block .button_link {
+  border: 3px solid #000;
+}
+.color_white .css_blind .settings_block .button_link.selected {
+  background: #000;
+  color: #fff;
+}
+.color_black .css_blind .settings_block .button_link {
+  border: 3px solid #fff;
+}
+.color_black .css_blind .settings_block .button_link.selected {
+  background: #fff;
+  color: #000;
+}
+.color_blue .css_blind .settings_block .button_link {
+  border: 3px solid #063462;
+}
+.color_blue .css_blind .settings_block .button_link.selected {
+  background: #063462;
+  color: #9dd1ff;
+}
+.css_blind .settings_block .label {
+  display: inline-block;
+  vertical-align: middle;
+  font: bold 24px/1 Arial, Helvetica sans-serif;
+  text-transform: uppercase;
+  margin: 0 10px 30px 0;
+}
+.css_blind .settings_block .js-toggle_color {
+  margin: 0 0 20px 0;
+  padding: 10px 35px;
+}
+.css_blind .settings_block .js-toggle_color.white {
+  border: 3px solid #000;
+  color: #000;
+  background: #fff;
+}
+.css_blind .settings_block .js-toggle_color.black {
+  border: 3px solid #fff;
+  color: #fff;
+  background: #000;
+}
+.css_blind .settings_block .js-toggle_color.blue {
+  border: 3px solid #063462;
+  color: #063462;
+  background: #9dd1ff;
+}
+.css_blind .center {
+  text-align: center;
+}
+.css_blind #top_panel, .css_blind #foot_panel {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 25px 15px 35px 15px;
+}
+.css_blind #top_panel .blind_logo, .css_blind #foot_panel .blind_logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 258px;
+  height: 60px;
+}
+.color_white .css_blind #top_panel .blind_logo, .color_white .css_blind #foot_panel .blind_logo {
+  background: url(../img/logo-blind.png) 0 0 no-repeat;
+}
+.color_black .css_blind #top_panel .blind_logo, .color_black .css_blind #foot_panel .blind_logo {
+  background: url(../img/logo-blind.png) 0 -65px no-repeat;
+}
+.color_blue .css_blind #top_panel .blind_logo, .color_blue .css_blind #foot_panel .blind_logo {
+  background: url(../img/logo-blind.png) 0 -130px no-repeat;
+}
+.css_blind .top_location {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 270px;
+  margin: 0 60px;
+}
+.css_blind .top_location .current_location {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  font: bold 20px/1 Arial, Helvetica sans-serif;
+  white-space: nowrap;
+}
+.css_blind .top_location .current_location span {
+  text-decoration: underline;
+}
+.css_blind .top_location .current_location:after {
+  content: '\25BC';
+  font: bold 16px/1 Arial, Helvetica sans-serif;
+  position: absolute;
+  margin: 3px 0 0 2px;
+}
+.css_blind .top_location .search_location {
+  position: absolute;
+  padding: 15px;
+  z-index: 1;
+  width: 315px;
+  top: 32px;
+  left: 0;
+}
+.css_blind .top_location .search_location .input {
+  background: #fff;
+  border: 1px solid #000;
+}
+.css_blind .top_location .search_location .input input[type=text] {
+  display: block;
+  float: left;
+  border: none;
+  width: 170px;
+  padding: 10px 15px;
+  font-size: 1em;
+  color: inherit;
+}
+.css_blind .top_location .search_location .button {
+  float: right;
+}
+.css_blind .top_location .search_location .button input {
+  padding: 10px 20px;
+}
+.color_white .css_blind .top_location .search_location {
+  border: 2px solid #000;
+  background: #fff;
+}
+.color_black .css_blind .top_location .search_location {
+  border: 2px solid #fff;
+  background: #000;
+}
+.color_blue .css_blind .top_location .search_location {
+  border: 2px solid #063462;
+  background: #9dd1ff;
+}
+.css_blind .top_location .criss_cross {
+  display: none;
+}
+.css_blind #menu_container {
+  width: 1000px;
+  margin: 0 auto 50px auto;
+  position: relative;
+}
+.css_blind #menu_container .open_menu {
+  display: block !important;
+}
+.css_blind #menu_container .open_menu_ico {
+  display: none;
+}
+.css_blind #menu_container #no_see, .css_blind #menu_container #font, .css_blind #menu_container #pda, .css_blind #menu_container .soc_block, .css_blind #menu_container #top_search {
+  display: none;
+}
+.css_blind #menu_container .top_link #kabinet_link {
+  position: absolute;
+  top: -80px;
+  right: 130px;
+  display: block;
+  font: bold 20px/1 Arial, Helvetica sans-serif;
+  text-decoration: none;
+}
+.css_blind #menu_container .top_link #kabinet_link img {
+  display: none;
+}
+.css_blind #menu_container .top_link #kabinet_link div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.css_blind #menu_container .top_link #kabinet_link .img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 31px;
+  margin: 0 10px 0 0;
+}
+.color_white .css_blind #menu_container .top_link #kabinet_link .img {
+  background: transparent url(../img/sprite-blind.png) -232px -80px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black .css_blind #menu_container .top_link #kabinet_link .img {
+  background: transparent url(../img/sprite-blind.png) -232px -132px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue .css_blind #menu_container .top_link #kabinet_link .img {
+  background: transparent url(../img/sprite-blind.png) -230px -186px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.css_blind #menu_container .top_search_link {
+  position: absolute;
+  top: -80px;
+  right: 15px;
+  display: block;
+  font: bold 20px/1 Arial, Helvetica sans-serif;
+  text-decoration: none;
+}
+.css_blind #menu_container .top_search_link:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 31px;
+  height: 31px;
+  margin: 0 5px 0 0;
+}
+.color_white .css_blind #menu_container .top_search_link:before {
+  background: transparent url(../img/sprite-blind.png) -269px -80px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black .css_blind #menu_container .top_search_link:before {
+  background: transparent url(../img/sprite-blind.png) -269px -132px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue .css_blind #menu_container .top_search_link:before {
+  background: transparent url(../img/sprite-blind.png) -269px -186px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.css_blind .main_menu {
+  position: relative;
+  text-align: center;
+  padding: 25px 0 10px 0;
+}
+.color_white .css_blind .main_menu {
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #000;
+}
+.color_black .css_blind .main_menu {
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+}
+.color_blue .css_blind .main_menu {
+  border-bottom: 1px solid #063462;
+  border-top: 1px solid #063462;
+}
+.css_blind .main_menu .main_menu_list .main_menu_item {
+  margin: 0 0 15px 0;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.css_blind .main_menu .main_menu_list .main_menu_item .main_menu_link {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 5px 15px;
+  display: block;
+}
+.css_blind .main_menu .main_menu_list .main_menu_item:hover .submenu_level1 {
+  display: block;
+}
+.color_white .css_blind .main_menu .main_menu_list .main_menu_item.active .main_menu_link {
+  background: #000;
+  color: #fff;
+}
+.color_black .css_blind .main_menu .main_menu_list .main_menu_item.active .main_menu_link {
+  background: #fff;
+  color: #000;
+}
+.color_blue .css_blind .main_menu .main_menu_list .main_menu_item.active .main_menu_link {
+  background: #063462;
+  color: #9dd1ff;
+}
+.css_blind .main_menu .submenu_level1 {
+  display: none;
+  min-width: 240px;
+  position: absolute;
+  top: 100%;
+  z-index: 60;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+.color_white .css_blind .main_menu .submenu_level1 {
+  background: #fff;
+  border: 2px solid #000;
+}
+.color_black .css_blind .main_menu .submenu_level1 {
+  background: #000;
+  border: 2px solid #fff;
+}
+.color_blue .css_blind .main_menu .submenu_level1 {
+  background: #9dd1ff;
+  border: 2px solid #063462;
+}
+.css_blind .main_menu .submenu_level1 .level1_item {
+  margin: 0;
+  text-align: left;
+}
+.css_blind .main_menu .submenu_level1 .level1_item .level1_link {
+  padding: 5px 15px;
+  display: block;
+  text-decoration: none;
+}
+.css_blind .main_menu .submenu_level1.left {
+  left: 0;
+}
+.css_blind .main_menu .submenu_level1.right {
+  right: 0;
+}
+.css_blind #side_menu {
+  margin: 0 0 30px 0;
+}
+.css_blind #side_menu .open_side_menu, .css_blind #side_menu .sub_menu {
+  display: none;
+}
+.css_blind #side_menu #side_menu_list {
+  text-align: center;
+  padding: 0 0 30px 0;
+}
+.color_white .css_blind #side_menu #side_menu_list {
+  border-bottom: 1px solid #000;
+}
+.color_black .css_blind #side_menu #side_menu_list {
+  border-bottom: 1px solid #fff;
+}
+.color_blue .css_blind #side_menu #side_menu_list {
+  border-bottom: 1px solid #063462;
+}
+.css_blind #side_menu #side_menu_list > li {
+  display: inline;
+  font: bold 18px/1 Arial, Helvetica sans-serif;
+}
+.css_blind #side_menu #side_menu_list > li a {
+  text-decoration: none;
+  padding: 8px 15px;
+  line-height: 35px;
+}
+.color_white .css_blind #side_menu #side_menu_list > li.current a {
+  background: #000;
+  color: #fff;
+}
+.color_black .css_blind #side_menu #side_menu_list > li.current a {
+  background: #fff;
+  color: #000;
+}
+.color_blue .css_blind #side_menu #side_menu_list > li.current a {
+  background: #063462;
+  color: #9dd1ff;
+}
+.css_blind .back_link {
+  margin: 0 15px 30px 15px;
+}
+.css_blind .back_link a {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  font: bold 27px/1 Arial, Helvetica sans-serif;
+}
+.css_blind .back_link a:before {
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 10px solid transparent;
+  content: '';
+  display: inline-block;
+  vertical-align: baseline;
+  height: 0;
+  margin: 0 10px 0 0;
+}
+.color_white .css_blind .back_link a {
+  border: 5px solid #000;
+}
+.color_white .css_blind .back_link a:before {
+  border-right: 15px solid #000;
+}
+.color_black .css_blind .back_link a {
+  border: 5px solid #fff;
+}
+.color_black .css_blind .back_link a:before {
+  border-right: 15px solid #fff;
+}
+.color_blue .css_blind .back_link a {
+  border: 5px solid #063462;
+}
+.color_blue .css_blind .back_link a:before {
+  border-right: 15px solid #063462;
+}
+.css_blind h1, .css_blind .H1 {
+  font-size: 1.8em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 0 0.8em 15px;
+}
+.css_blind h2, .css_blind .H2 {
+  font-size: 1.6em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 0 0.8em 15px;
+}
+.css_blind h3, .css_blind .H3 {
+  font-size: 1.4em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 0 0.8em 15px;
+}
+.css_blind h4, .css_blind .H4 {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 0 0.8em 15px;
+}
+.css_blind fieldset {
+  border: 0;
+}
+.css_blind textarea {
+  resize: vertical;
+}
+.css_blind .white_input input {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  width: 100%;
+}
+.color_white .css_blind .white_input {
+  background: #fff;
+  border: 2px solid #000;
+}
+.color_black .css_blind .white_input {
+  background: #000;
+  border: 2px solid #fff;
+}
+.color_blue .css_blind .white_input {
+  background: #9dd1ff;
+  border: 2px solid #063462;
+}
+.css_blind .radioBox, .css_blind .checkBox {
+  min-height: 33px;
+}
+.css_blind .radioBox label, .css_blind .checkBox label {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  padding: 0 0 0 55px;
+  font-size: 1.2em;
+}
+.css_blind .radioBox label:before, .css_blind .checkBox label:before {
+  display: inline-block;
+  vertical-align: middle;
+  content: '';
+  width: 42px;
+  height: 42px;
+  margin: 0 5px 0 -55px;
+}
+.css_blind .radioBox label span, .css_blind .checkBox label span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.css_blind .radioBox input, .css_blind .checkBox input {
+  display: none;
+}
+.color_white .css_blind .radioBox input[type='checkbox'] + label:before, .color_white .css_blind .checkBox input[type='checkbox'] + label:before {
+  background: transparent url(../img/sprite-blind.png) -467px -80px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_white .css_blind .radioBox input[type='checkbox']:checked + label:before, .color_white .css_blind .checkBox input[type='checkbox']:checked + label:before {
+  background: transparent url(../img/sprite-blind.png) -515px -80px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_white .css_blind .radioBox input[type='radio'] + label:before, .color_white .css_blind .checkBox input[type='radio'] + label:before {
+  background: transparent url(../img/sprite-blind.png) -85px -80px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_white .css_blind .radioBox input[type='radio']:checked + label:before, .color_white .css_blind .checkBox input[type='radio']:checked + label:before {
+  background: transparent url(../img/sprite-blind.png) -133px -80px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black .css_blind .radioBox input[type='checkbox'] + label:before, .color_black .css_blind .checkBox input[type='checkbox'] + label:before {
+  background: transparent url(../img/sprite-blind.png) -467px -132px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black .css_blind .radioBox input[type='checkbox']:checked + label:before, .color_black .css_blind .checkBox input[type='checkbox']:checked + label:before {
+  background: transparent url(../img/sprite-blind.png) -515px -132px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black .css_blind .radioBox input[type='radio'] + label:before, .color_black .css_blind .checkBox input[type='radio'] + label:before {
+  background: transparent url(../img/sprite-blind.png) -85px -132px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black .css_blind .radioBox input[type='radio']:checked + label:before, .color_black .css_blind .checkBox input[type='radio']:checked + label:before {
+  background: transparent url(../img/sprite-blind.png) -133px -132px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue .css_blind .radioBox input[type='checkbox'] + label:before, .color_blue .css_blind .checkBox input[type='checkbox'] + label:before {
+  background: transparent url(../img/sprite-blind.png) -467px -186px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue .css_blind .radioBox input[type='checkbox']:checked + label:before, .color_blue .css_blind .checkBox input[type='checkbox']:checked + label:before {
+  background: transparent url(../img/sprite-blind.png) -515px -186px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue .css_blind .radioBox input[type='radio'] + label:before, .color_blue .css_blind .checkBox input[type='radio'] + label:before {
+  background: transparent url(../img/sprite-blind.png) -85px -186px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue .css_blind .radioBox input[type='radio']:checked + label:before, .color_blue .css_blind .checkBox input[type='radio']:checked + label:before {
+  background: transparent url(../img/sprite-blind.png) -133px -186px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.css_blind .data_box label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 1% 0 2%;
+}
+.css_blind .data_box label:first-child {
+  margin: 0 1% 0 0;
+}
+.css_blind .data_box .white_input {
+  display: inline-block;
+  vertical-align: middle;
+  width: 41%;
+  margin: 0 1% 0 0;
+}
+.css_blind .data_box .piker_icon {
+  display: none;
+}
+.css_blind button.button, .css_blind a.button {
+  padding: 12px 40px;
+  font-size: 1.3em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.css_blind .button {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+}
+.css_blind .button input, .css_blind .button button, .css_blind .button a {
+  cursor: pointer;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  padding: 12px 40px;
+  font-size: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 1.5em;
+}
+.color_white .css_blind .button input, .color_white .css_blind .button button, .color_white .css_blind .button a {
+  color: #fff;
+}
+.color_black .css_blind .button input, .color_black .css_blind .button button, .color_black .css_blind .button a {
+  color: #000;
+}
+.color_blue .css_blind .button input, .color_blue .css_blind .button button, .color_blue .css_blind .button a {
+  color: #9dd1ff;
+}
+.css_blind .button input {
+  font: inherit;
+  color: inherit;
+}
+.color_white .css_blind .button {
+  background: #000;
+  color: #fff;
+}
+.color_black .css_blind .button {
+  background: #fff;
+  color: #000;
+}
+.color_blue .css_blind .button {
+  background: #063462;
+  color: #9dd1ff;
+}
+.css_blind .page_search {
+  margin: 0 15px 50px 15px;
+}
+.css_blind .page_search form {
+  position: relative;
+}
+.css_blind .page_search .white_input {
+  margin: 0 170px 30px 0;
+}
+.css_blind .page_search .button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.css_blind .site_search {
+  position: relative;
+  margin: 0 15px 50px 15px;
+  padding: 30px;
+}
+.css_blind .site_search .H2 {
+  margin: 0 0 1em 0;
+}
+.css_blind .site_search form {
+  position: relative;
+}
+.css_blind .site_search .white_input {
+  margin: 0 180px 30px 0;
+}
+.css_blind .site_search .checkBox {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30%;
+  margin: 0 2% 15px 0;
+}
+.css_blind .site_search .blue_button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.color_white .css_blind .site_search {
+  border: 2px solid #000;
+}
+.color_black .css_blind .site_search {
+  border: 2px solid #fff;
+}
+.color_blue .css_blind .site_search {
+  border: 2px solid #063462;
+}
+.css_blind .doing_search {
+  position: relative;
+  padding: 35px 0 35px 40px;
+  margin: 0 15px 50px 15px;
+}
+.color_white .css_blind .doing_search {
+  border: 2px solid #000;
+}
+.color_black .css_blind .doing_search {
+  border: 2px solid #fff;
+}
+.color_blue .css_blind .doing_search {
+  border: 2px solid #063462;
+}
+.css_blind .doing_search .H3 {
+  margin: 0 0 1em 0px;
+}
+.css_blind .doing_search .white_input {
+  margin: 0 4% 25px 0;
+}
+.css_blind .doing_search .whiteSelect {
+  margin: 0 4% 25px 0;
+}
+.css_blind .doing_search .checkBox {
+  display: inline-block;
+  vertical-align: middle;
+  width: 45%;
+  margin: 0 4% 25px 0;
+}
+.fontsize_big .css_blind .doing_search .checkBox {
+  width: 95%;
+}
+.css_blind .doing_search .button {
+  float: right;
+  margin: 0 4% 0 0;
+}
+.css_blind .doing_search .button.reset_button {
+  margin: 0 4% 0 0;
+}
+.css_blind .doing_search .detail_search {
+  display: none;
+}
+.css_blind .doing_search.short_form .whiteSelect, .css_blind .doing_search.short_form .checkBox, .css_blind .doing_search.short_form .reset_button {
+  display: none;
+}
+.css_blind .doing_search.short_form .detail_search {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+.color_white .css_blind .doing_search.short_form .detail_search {
+  border-bottom: 2px dashed #000;
+}
+.color_black .css_blind .doing_search.short_form .detail_search {
+  border-bottom: 2px dashed #fff;
+}
+.color_blue .css_blind .doing_search.short_form .detail_search {
+  border-bottom: 2px dashed #063462;
+}
+.css_blind .filter_docs_form {
+  position: relative;
+  padding: 35px 0 35px 40px;
+  margin: 0 15px 50px 15px;
+}
+.css_blind .filter_docs_form .H2 {
+  margin: 0 4% 30px 0;
+}
+.css_blind .filter_docs_form > .white_input {
+  width: 95%;
+  margin: 0 4% 30px 0;
+}
+.css_blind .filter_docs_form .whiteSelect, .css_blind .filter_docs_form .data_box, .css_blind .filter_docs_form .doc_number {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 4% 30px 0;
+  width: 45%;
+}
+.css_blind .filter_docs_form .doc_number .white_input {
+  margin: 0 0 5px 0;
+}
+.css_blind .filter_docs_form .button {
+  float: right;
+  margin: 0 5% 0 0;
+}
+.css_blind .filter_docs_form .result {
+  float: left;
+}
+.css_blind .filter_docs_form .result span {
+  font-size: 3em;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 1em;
+}
+.css_blind .filter_docs_form.short .doc_number {
+  margin: 0 4% 30px 0;
+}
+.css_blind .filter_docs_form.short .result {
+  margin: 1.5em 0 0 0;
+}
+.css_blind .filter_docs_form.short .result span {
+  float: right;
+  margin: -25px 0 0 10px;
+}
+.color_white .css_blind .filter_docs_form {
+  border: 2px solid #000;
+}
+.color_black .css_blind .filter_docs_form {
+  border: 2px solid #fff;
+}
+.color_blue .css_blind .filter_docs_form {
+  border: 2px solid #063462;
+}
+.css_blind .saerch_docs_result {
+  margin: 0 15px 50px 15px;
+}
+.css_blind ol.search_result {
+  margin: 0 15px 50px 30px;
+}
+.css_blind ol.search_result li {
+  margin: 0 0 2em 0;
+}
+.css_blind ol.search_result li mark {
+  margin: 0 5px 0 0;
+  padding: 0 5px;
+}
+.color_white .css_blind ol.search_result li mark {
+  background: #000;
+  color: #fff;
+}
+.color_black .css_blind ol.search_result li mark {
+  background: #fff;
+  color: #000;
+}
+.color_blue .css_blind ol.search_result li mark {
+  background: #063462;
+  color: #9dd1ff;
+}
+.css_blind ol.search_result .search_crumbs {
+  font-size: 0.8em;
+}
+.css_blind ol.search_result .search_crumbs a {
+  text-decoration: none;
+  margin: 0 5px 0 0;
+}
+.css_blind .datepiker, .css_blind .datepiker_year_select {
+  margin: 0 15px 50px 15px;
+}
+.css_blind .datepiker .ui-datepicker-header, .css_blind .datepiker_year_select .ui-datepicker-header {
+  position: relative;
+  padding: 20px 50px;
+}
+.css_blind .datepiker .ui-datepicker-title, .css_blind .datepiker_year_select .ui-datepicker-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+.css_blind .datepiker .chosen-container, .css_blind .datepiker_year_select .chosen-container {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: -70px;
+}
+.css_blind .datepiker .ui-datepicker-prev, .css_blind .datepiker .ui-datepicker-next, .css_blind .datepiker_year_select .ui-datepicker-prev, .css_blind .datepiker_year_select .ui-datepicker-next {
+  position: absolute;
+  top: 18px;
+  font: bold 60px/0.5 Arial, Helvetica sans-serif;
+}
+.css_blind .datepiker .ui-datepicker-prev, .css_blind .datepiker_year_select .ui-datepicker-prev {
+  left: 30px;
+}
+.css_blind .datepiker .ui-datepicker-next, .css_blind .datepiker_year_select .ui-datepicker-next {
+  right: 30px;
+}
+.css_blind .datepiker table.ui-datepicker-calendar, .css_blind .datepiker_year_select table.ui-datepicker-calendar {
+  border-spacing: 0;
+  width: 100%;
+}
+.css_blind .datepiker table.ui-datepicker-calendar th, .css_blind .datepiker_year_select table.ui-datepicker-calendar th {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px 10px;
+}
+.css_blind .datepiker table.ui-datepicker-calendar td, .css_blind .datepiker_year_select table.ui-datepicker-calendar td {
+  text-align: center;
+}
+.css_blind .datepiker table.ui-datepicker-calendar a, .css_blind .datepiker_year_select table.ui-datepicker-calendar a {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+.color_white .css_blind .datepiker, .color_white .css_blind .datepiker_year_select {
+  border: 2px solid #000;
+}
+.color_white .css_blind .datepiker .ui-datepicker-header, .color_white .css_blind .datepiker_year_select .ui-datepicker-header {
+  border-bottom: 3px solid #000;
+}
+.color_white .css_blind .datepiker table.ui-datepicker-calendar th, .color_white .css_blind .datepiker_year_select table.ui-datepicker-calendar th {
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.color_white .css_blind .datepiker table.ui-datepicker-calendar td, .color_white .css_blind .datepiker_year_select table.ui-datepicker-calendar td {
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.color_white .css_blind .datepiker table.ui-datepicker-calendar td.ui-datepicker-today a, .color_white .css_blind .datepiker_year_select table.ui-datepicker-calendar td.ui-datepicker-today a {
+  background: #000;
+  color: #fff;
+}
+.color_white .css_blind .datepiker table.ui-datepicker-calendar a.ui-state-active, .color_white .css_blind .datepiker_year_select table.ui-datepicker-calendar a.ui-state-active {
+  background: #000;
+  color: #fff;
+}
+.color_black .css_blind .datepiker, .color_black .css_blind .datepiker_year_select {
+  border: 2px solid #fff;
+}
+.color_black .css_blind .datepiker .ui-datepicker-header, .color_black .css_blind .datepiker_year_select .ui-datepicker-header {
+  border-bottom: 3px solid #fff;
+}
+.color_black .css_blind .datepiker table.ui-datepicker-calendar th, .color_black .css_blind .datepiker_year_select table.ui-datepicker-calendar th {
+  border-left: 1px solid #fff;
+  border-left: 1px solid #fff;
+}
+.color_black .css_blind .datepiker table.ui-datepicker-calendar td, .color_black .css_blind .datepiker_year_select table.ui-datepicker-calendar td {
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.color_black .css_blind .datepiker table.ui-datepicker-calendar td.ui-datepicker-today a, .color_black .css_blind .datepiker_year_select table.ui-datepicker-calendar td.ui-datepicker-today a {
+  background: #fff;
+  color: #000;
+}
+.color_black .css_blind .datepiker table.ui-datepicker-calendar a.ui-state-active, .color_black .css_blind .datepiker_year_select table.ui-datepicker-calendar a.ui-state-active {
+  background: #fff;
+  color: #000;
+}
+.color_blue .css_blind .datepiker, .color_blue .css_blind .datepiker_year_select {
+  border: 2px solid #063462;
+}
+.color_blue .css_blind .datepiker .ui-datepicker-header, .color_blue .css_blind .datepiker_year_select .ui-datepicker-header {
+  border-bottom: 3px solid #063462;
+}
+.color_blue .css_blind .datepiker table.ui-datepicker-calendar th, .color_blue .css_blind .datepiker_year_select table.ui-datepicker-calendar th {
+  border-left: 1px solid #063462;
+  border-bottom: 1px solid #063462;
+}
+.color_blue .css_blind .datepiker table.ui-datepicker-calendar td, .color_blue .css_blind .datepiker_year_select table.ui-datepicker-calendar td {
+  border-left: 1px solid #063462;
+  border-bottom: 1px solid #063462;
+}
+.color_blue .css_blind .datepiker table.ui-datepicker-calendar td.ui-datepicker-today a, .color_blue .css_blind .datepiker_year_select table.ui-datepicker-calendar td.ui-datepicker-today a {
+  background: #063462;
+  color: #9dd1ff;
+}
+.color_blue .css_blind .datepiker table.ui-datepicker-calendar a.ui-state-active, .color_blue .css_blind .datepiker_year_select table.ui-datepicker-calendar a.ui-state-active {
+  background: #063462;
+  color: #9dd1ff;
+}
+.css_blind .year_select {
+  text-align: center;
+  font-size: 1.5em;
+  position: relative;
+  margin: 0 0 10px 0;
+}
+.css_blind .year_select .selected_year {
+  height: 60px;
+  padding: 12px 0 0 15px;
+}
+.css_blind .year_select .selected_year:after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: none;
+  margin: 0 0 0 5px;
+}
+.color_white .css_blind .year_select .selected_year {
+  border: 2px solid #000;
+}
+.color_white .css_blind .year_select .selected_year:after {
+  border-top: 10px solid #000;
+}
+.color_white .css_blind .year_select .selected_year.open:after {
+  border-bottom: 10px solid #000;
+  border-top: none;
+}
+.color_black .css_blind .year_select .selected_year {
+  border: 2px solid #fff;
+}
+.color_black .css_blind .year_select .selected_year:after {
+  border-top: 10px solid #fff;
+}
+.color_black .css_blind .year_select .selected_year.open:after {
+  border-bottom: 10px solid #fff;
+  border-top: none;
+}
+.color_blue .css_blind .year_select .selected_year {
+  border: 2px solid #063462;
+}
+.color_blue .css_blind .year_select .selected_year:after {
+  border-top: 10px solid #063462;
+}
+.color_blue .css_blind .year_select .selected_year.open:after {
+  border-bottom: 10px solid #063462;
+  border-top: none;
+}
+.css_blind .year_select .scroll_box {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  z-index: 10;
+  padding: 0 0 10px 0;
+  display: none;
+}
+.css_blind .year_select .years_list {
+  height: 200px;
+  overflow: auto;
+  border-top: none;
+}
+.css_blind .year_select .years_list .year {
+  padding: 20px 15px 15px 15px;
+}
+.css_blind .year_select .years_list .year:before {
+  content: '';
+  display: block;
+  height: 1px;
+  margin: -20px 0 10px 0;
+}
+.color_white .css_blind .year_select .years_list {
+  background: #fff;
+  border: 2px solid #000;
+}
+.color_white .css_blind .year_select .years_list .year:before {
+  background: #000;
+}
+.color_black .css_blind .year_select .years_list {
+  background: #000;
+  border: 2px solid #fff;
+}
+.color_black .css_blind .year_select .years_list .year:before {
+  background: #fff;
+}
+.color_blue .css_blind .year_select .years_list {
+  background: #9dd1ff;
+  border: 2px solid #063462;
+}
+.color_blue .css_blind .year_select .years_list .year:before {
+  background: #063462;
+}
+.css_blind #error {
+  padding: 40px 0;
+  text-align: center;
+}
+.css_blind #error img {
+  width: 100%;
+  height: auto;
+  margin: 0 0 30px 0;
+}
+.css_blind #error a {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+@media (min-width: 980px) {
+  .css_blind #error {
+    padding: 70px;
+  }
+  .css_blind #error img {
+    width: auto;
+  }
+}
+.image_off .css_blind #error img {
+  display: none;
+}
+.css_blind .breadcrumbs {
+  margin: 0 15px 50px 15px;
+}
+.css_blind .breadcrumbs a {
+  text-decoration: none;
+}
+.css_blind .breadcrumbs a:before {
+  content: '>';
+  margin: 0 7px;
+}
+.css_blind .breadcrumbs a:first-child:before {
+  display: none;
+}
+.css_blind .parallax_title {
+  padding: 0 15px 50px 15px;
+}
+.css_blind .parallax_title .H1 {
+  margin: 0;
+}
+.css_blind .arrow_link {
+  text-transform: uppercase;
+  float: right;
+  margin: -50px 15px 0 0;
+}
+.css_blind .section_links {
+  margin: 0 10px 50px 15px;
+}
+.css_blind .section_links .block_link {
+  margin: 0 0 5px 0;
+}
+@media (min-width: 760px) {
+  .css_blind .section_links .block_link {
+    width: 50%;
+    float: left;
+    margin: 0;
+    padding: 0 5px 0 0;
+  }
+  .css_blind .section_links .block_link.short {
+    width: 33%;
+  }
+}
+.css_blind .block_link {
+  margin: 0 0 40px 0;
+}
+.css_blind .block_link a {
+  display: table;
+  width: 100%;
+  height: 100px;
+  margin: 0 0 5px 0;
+  padding: 0 20px;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+}
+.color_white .css_blind .block_link a {
+  border: 5px solid #000;
+}
+.color_black .css_blind .block_link a {
+  border: 5px solid #fff;
+}
+.color_blue .css_blind .block_link a {
+  border: 5px solid #063462;
+}
+.css_blind .block_link a .ico {
+  display: none;
+}
+.css_blind .block_link span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.css_blind .block_link span.txt {
+  width: 100%;
+  padding: 0 0 0 10px;
+}
+.css_blind .docs_box {
+  position: relative;
+  overflow: hidden;
+}
+.css_blind .docs_box .ico {
+  display: none;
+}
+.css_blind .docs_box .description {
+  display: block;
+  text-decoration: none;
+}
+.css_blind .docs_box .file_name {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.css_blind .section_index {
+  margin: 0 15px 50px 15px;
+}
+.css_blind .section_index .section_banner {
+  margin: 0 0 25px 0;
+}
+.css_blind .section_index .section_banner a {
+  display: block;
+  text-decoration: none;
+  padding: 35px 20px;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.color_white .css_blind .section_index .section_banner a {
+  border: 5px solid #000;
+}
+.color_black .css_blind .section_index .section_banner a {
+  border: 5px solid #fff;
+}
+.color_blue .css_blind .section_index .section_banner a {
+  border: 5px solid #063462;
+}
+.css_blind .section_index .section_banner img {
+  display: none;
+}
+.css_blind .section_index .section_banner .ban_content .ban_title {
+  text-transform: uppercase;
+}
+.css_blind .section_index .section_banner .ban_content .arrow_link, .css_blind .section_index .section_banner .ban_content .ban_desc {
+  display: none;
+}
+.css_blind .section_index .section_banner .section_title {
+  text-transform: uppercase;
+}
+.css_blind .collapse_title {
+  padding: 20px 25px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.css_blind .collapse_title:before {
+  content: '\25BC';
+  display: block;
+  width: 22px;
+  height: 13px;
+  float: right;
+  margin: 0 0 0 25px;
+}
+.css_blind .collapse_title.open:before {
+  content: '\25B2';
+}
+.color_white .css_blind .collapse_title {
+  border: 5px solid #000;
+}
+.color_white .css_blind .collapse_title.open {
+  background: #000;
+  color: #fff;
+}
+.color_black .css_blind .collapse_title {
+  border: 5px solid #fff;
+}
+.color_black .css_blind .collapse_title.open {
+  background: #fff;
+  color: #000;
+}
+.color_blue .css_blind .collapse_title {
+  border: 5px solid #063462;
+}
+.color_blue .css_blind .collapse_title.open {
+  background: #063462;
+  color: #9dd1ff;
+}
+.css_blind .collapse_box {
+  padding: 30px 0;
+}
+.css_blind .dash_link {
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1em;
+  font-weight: bold;
+  margin: 0 20px 20px 0;
+  padding: 10px 20px;
+}
+.color_white .css_blind .dash_link {
+  border: 2px solid #000;
+}
+.color_white .css_blind .dash_link.active, .color_white .css_blind .dash_link.selected {
+  background: #000;
+  color: #fff;
+}
+.color_black .css_blind .dash_link {
+  border: 2px solid #fff;
+}
+.color_black .css_blind .dash_link.active, .color_black .css_blind .dash_link.selected {
+  background: #fff;
+  color: #000;
+}
+.color_blue .css_blind .dash_link {
+  border: 2px solid #063462;
+}
+.color_blue .css_blind .dash_link.active, .color_blue .css_blind .dash_link.selected {
+  background: #063462;
+  color: #9dd1ff;
+}
+.css_blind .js-tabs {
+  margin: 0 15px 50px 15px;
+}
+.css_blind .js-tabs .js-tabNav {
+  margin: 0 0 20px 0;
+}
+.css_blind .button_tabs .js-tabLink {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 30px;
+  margin: 0 20px 20px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+.color_white .css_blind .button_tabs .js-tabLink {
+  border: 2px solid #000;
+}
+.color_white .css_blind .button_tabs .js-tabLink.active {
+  background: #000;
+  color: #fff;
+}
+.color_black .css_blind .button_tabs .js-tabLink {
+  border: 2px solid #fff;
+}
+.color_black .css_blind .button_tabs .js-tabLink.active {
+  background: #fff;
+  color: #000;
+}
+.color_blue .css_blind .button_tabs .js-tabLink {
+  border: 2px solid #063462;
+}
+.color_blue .css_blind .button_tabs .js-tabLink.active {
+  background: #063462;
+  color: #9dd1ff;
+}
+.css_blind .arrow_tabs .js-tabNav {
+  display: table;
+  width: 100%;
+  margin: 0 0 40px 0;
+}
+.css_blind .arrow_tabs .arr_link {
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+  padding: 15px;
+}
+.css_blind .arrow_tabs .arr_link.active:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-bottom: 15px solid transparent;
+  border-left: 27px solid transparent;
+  border-right: 27px solid transparent;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  margin: 0 0 0 -27px;
+}
+.color_white .css_blind .arrow_tabs .arr_link {
+  border: 2px solid #000;
+}
+.color_white .css_blind .arrow_tabs .arr_link.active {
+  background: #000;
+  color: #fff;
+}
+.color_white .css_blind .arrow_tabs .arr_link.active:after {
+  border-top: 15px solid #000;
+}
+.color_black .css_blind .arrow_tabs .arr_link {
+  border: 2px solid #fff;
+}
+.color_black .css_blind .arrow_tabs .arr_link.active {
+  background: #fff;
+  color: #000;
+}
+.color_black .css_blind .arrow_tabs .arr_link.active:after {
+  border-top: 15px solid #fff;
+}
+.color_blue .css_blind .arrow_tabs .arr_link {
+  border: 2px solid #063462;
+}
+.color_blue .css_blind .arrow_tabs .arr_link.active {
+  background: #063462;
+  color: #9dd1ff;
+}
+.color_blue .css_blind .arrow_tabs .arr_link.active:after {
+  border-top: 15px solid #063462;
+}
+.css_blind table.default,
+.css_blind .table {
+  display: table;
+  width: 100% !important;
+  border-spacing: 0;
+}
+.css_blind table.default thead tr,
+.css_blind .table_head {
+  display: table-row;
+  background: #f1f1f1;
+  color: #666;
+}
+.css_blind table.default thead tr td,
+.css_blind table.default thead tr .table_cell,
+.css_blind .table_head td,
+.css_blind .table_head .table_cell {
+  border-bottom: none;
+  padding: 20px 15px;
+  text-transform: uppercase;
+  text-align: center;
+  background: transparent !important;
+  vertical-align: middle;
+}
+.css_blind table.default thead tr td.link,
+.css_blind table.default thead tr .table_cell.link,
+.css_blind .table_head td.link,
+.css_blind .table_head .table_cell.link {
+  background: #f1f1f1;
+  border-left: none;
+}
+.css_blind table.default thead tr td.link:before,
+.css_blind table.default thead tr .table_cell.link:before,
+.css_blind .table_head td.link:before,
+.css_blind .table_head .table_cell.link:before {
+  display: none;
+}
+.color_white .css_blind table.default thead tr, .color_white
+.css_blind .table_head {
+  background: #000;
+  color: #fff;
+}
+.color_black .css_blind table.default thead tr, .color_black
+.css_blind .table_head {
+  background: #fff;
+  color: #000;
+}
+.color_blue .css_blind table.default thead tr, .color_blue
+.css_blind .table_head {
+  background: #063462;
+  color: #9dd1ff;
+}
+.css_blind table.default tr,
+.css_blind .table_row {
+  display: table-row;
+}
+.css_blind table.default td,
+.css_blind .table_cell {
+  display: table-cell;
+  vertical-align: top;
+  padding: 10px 15px;
+}
+.color_white .css_blind table.default td, .color_white
+.css_blind .table_cell {
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.color_black .css_blind table.default td, .color_black
+.css_blind .table_cell {
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.color_blue .css_blind table.default td, .color_blue
+.css_blind .table_cell {
+  border-left: 1px solid #063462;
+  border-bottom: 1px solid #063462;
+}
+.css_blind table.default td:first-child,
+.css_blind .table_cell:first-child {
+  border-left: none;
+}
+.css_blind table.default td.organization,
+.css_blind .table_cell.organization {
+  text-align: center;
+}
+.css_blind table.default td.leader,
+.css_blind .table_cell.leader {
+  text-align: center;
+}
+.css_blind table.default td.name,
+.css_blind .table_cell.name {
+  width: 170px;
+}
+.css_blind table.default td.date, .css_blind table.default td.actual, .css_blind table.default td.doc_number,
+.css_blind .table_cell.date,
+.css_blind .table_cell.actual,
+.css_blind .table_cell.doc_number {
+  text-align: center;
+  width: 13%;
+}
+.css_blind table.default td.link,
+.css_blind .table_cell.link {
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.css_blind table.default td.look_load,
+.css_blind .table_cell.look_load {
+  width: 130px;
+  min-width: 130px;
+  max-width: 130px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.css_blind table.default td.look_load .look, .css_blind table.default td.look_load .load,
+.css_blind .table_cell.look_load .look,
+.css_blind .table_cell.look_load .load {
+  margin: 0 0 10px 0;
+}
+.css_blind table.default td.look_load .size,
+.css_blind .table_cell.look_load .size {
+  display: none;
+}
+.css_blind table.default td .sorter,
+.css_blind .table_cell .sorter {
+  text-transform: none;
+}
+.color_white .css_blind table.default td .sorter, .color_white
+.css_blind .table_cell .sorter {
+  border-bottom: 2px dashed #fff;
+}
+.color_black .css_blind table.default td .sorter, .color_black
+.css_blind .table_cell .sorter {
+  border-bottom: 2px dashed #000;
+}
+.color_blue .css_blind table.default td .sorter, .color_blue
+.css_blind .table_cell .sorter {
+  border-bottom: 2px dashed #9dd1ff;
+}
+.css_blind table.default td p,
+.css_blind .table_cell p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.css_blind .table_box, .css_blind .person_table {
+  margin: 0 15px 50px 15px;
+}
+.css_blind .modal_overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+.css_blind .modal_overlay .modal_content {
+  width: 700px;
+  min-height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -200px 0 0 -350px;
+}
+.css_blind .modal_overlay .close {
+  position: absolute;
+  top: -50px;
+  right: -80px;
+  font: bold 100px/0.5 Arial, Helvetica sans-serif;
+  cursor: pointer;
+}
+.css_blind .modal_overlay .vodeo_modal {
+  padding: 20px;
+}
+.color_white .css_blind .modal_overlay {
+  background: #000;
+  background: rgba(0, 0, 0, 0.5);
+}
+.color_white .css_blind .modal_overlay .modal_content {
+  background: #fff;
+}
+.color_white .css_blind .modal_overlay .close {
+  color: #fff;
+}
+.color_black .css_blind .modal_overlay {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.5);
+}
+.color_black .css_blind .modal_overlay .modal_content {
+  background: #000;
+}
+.color_black .css_blind .modal_overlay .close {
+  color: #000;
+}
+.color_blue .css_blind .modal_overlay {
+  background: #063462;
+  background: rgba(0, 0, 0, 0.5);
+}
+.color_blue .css_blind .modal_overlay .modal_content {
+  background: #9dd1ff;
+}
+.color_blue .css_blind .modal_overlay .close {
+  color: #9dd1ff;
+}
+.css_blind #main_slider {
+  position: relative;
+  margin: 0 15px 80px 15px;
+}
+.css_blind .sliderContent {
+  width: 100%;
+  height: 180px;
+  clear: both;
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 50px 0;
+}
+.css_blind .sliderContent .item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.css_blind .sliderContent .item .slide_pahel a {
+  text-decoration: none;
+}
+.css_blind .sliderContent .item .slide_pahel .slide_title {
+  font: normal 1.8em/1 Arial, Helvetica sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 0 0.5em 0;
+  display: block;
+}
+.image_on .css_blind .sliderContent .item .image {
+  display: block;
+  width: 25%;
+  float: left;
+  overflow: hidden;
+}
+.image_on .css_blind .sliderContent .item .image img {
+  width: auto;
+  height: 100%;
+}
+.image_on .css_blind .sliderContent .item .slide_pahel {
+  padding: 0 0 0 30%;
+}
+.image_off .css_blind .sliderContent .item .image {
+  display: none;
+}
+.css_blind .sliderBullets {
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  z-index: 50;
+}
+.css_blind .sliderBullets a {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  margin: 0 10px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+.color_white .css_blind .sliderBullets a {
+  border: 5px solid #000;
+}
+.color_black .css_blind .sliderBullets a {
+  border: 5px solid #fff;
+}
+.color_blue .css_blind .sliderBullets a {
+  border: 5px solid #063462;
+}
+.color_white .css_blind .sliderBullets a.active {
+  background: #000;
+}
+.color_black .css_blind .sliderBullets a.active {
+  background: #fff;
+}
+.color_blue .css_blind .sliderBullets a.active {
+  background: #063462;
+}
+.image_on .css_blind .sliderBullets {
+  width: 70%;
+}
+.image_off .css_blind .sliderBullets {
+  width: 100%;
+}
+.css_blind .sliderArrows {
+  display: none;
+}
+.css_blind #for_person_block {
+  margin: 50px 0;
+  text-align: center;
+}
+.css_blind #for_person_block .person_type_box {
+  margin: 0 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+.css_blind #for_person_block .person_type_box .pic {
+  display: none;
+}
+.css_blind #for_person_block .person_type_box .title {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font: bold 24px/1 Arial, Helvetica sans-serif;
+  padding: 20px;
+}
+.color_white .css_blind #for_person_block .person_type_box {
+  border: 5px solid #000;
+}
+.color_black .css_blind #for_person_block .person_type_box {
+  border: 5px solid #fff;
+}
+.color_blue .css_blind #for_person_block .person_type_box {
+  border: 5px solid #063462;
+}
+.css_blind #main_news {
+  margin: 0 0 50px 0;
+}
+.css_blind #main_news .news_link {
+  display: block;
+  text-decoration: none;
+  position: relative;
+  margin: 0 15px 35px 15px;
+  overflow: hidden;
+}
+.image_on .css_blind #main_news .news_link .news_image {
+  width: 80px;
+  height: auto;
+  display: block;
+  float: left;
+}
+.image_off .css_blind #main_news .news_link .news_image {
+  display: none;
+}
+.css_blind #main_news .news_link .news_content {
+  display: block;
+}
+.image_on .css_blind #main_news .news_link .news_content {
+  margin: 0 0 0 100px;
+}
+.css_blind #main_news .news_link .news_date {
+  display: block;
+  margin: 0 0 5px 0;
+}
+.css_blind #main_news .news_link .news_anons {
+  text-decoration: none;
+  display: block;
+  margin: 0 0 10px 0;
+}
+.css_blind #main_news .news_link .news_more {
+  display: none;
+}
+.css_blind .important_links {
+  margin: 0 15px 50px 15px;
+}
+.css_blind .important_links .banner {
+  margin: 0 0 25px 0;
+}
+.css_blind .important_links .img_link {
+  position: relative;
+  display: block;
+  padding: 35px 20px;
+  text-decoration: none;
+}
+.css_blind .important_links .img_link img {
+  display: none;
+}
+.color_white .css_blind .important_links .img_link {
+  border: 5px solid #000;
+}
+.color_black .css_blind .important_links .img_link {
+  border: 5px solid #fff;
+}
+.color_blue .css_blind .important_links .img_link {
+  border: 5px solid #063462;
+}
+.css_blind #open_service {
+  margin: 0 10px 50px 15px;
+  padding: 50px 0 0 0;
+}
+.css_blind #open_service .section_links {
+  margin: 0;
+}
+.color_white .css_blind #open_service {
+  border-top: 2px solid #000;
+}
+.color_black .css_blind #open_service {
+  border-top: 2px solid #fff;
+}
+.color_blue .css_blind #open_service {
+  border-top: 2px solid #063462;
+}
+.css_blind #eservice {
+  margin: 0 0 50px 0;
+}
+.css_blind .eservice_link {
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  font-size: 1.3em;
+  text-decoration: none;
+  padding: 15px;
+  margin: 0 1% 25px 1%;
+}
+.color_white .css_blind .eservice_link {
+  border: 5px solid #000;
+}
+.color_black .css_blind .eservice_link {
+  border: 5px solid #fff;
+}
+.color_blue .css_blind .eservice_link {
+  border: 5px solid #063462;
+}
+.fontsize_big .css_blind .eservice_link {
+  width: 47%;
+}
+.css_blind .eservice_link span {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  min-height: 130px;
+}
+.css_blind .eservice_link .ico {
+  display: none;
+}
+.css_blind .load_list, .css_blind .docs_list {
+  margin: 0 0 50px 0;
+}
+.css_blind .load_list .docs_box, .css_blind .docs_list .docs_box {
+  margin: 0 15px 40px 15px;
+}
+.css_blind article {
+  margin: 0 15px 50px 15px;
+}
+.css_blind article h1, .css_blind article .H1, .css_blind article h2, .css_blind article .H2, .css_blind article h3, .css_blind article .H3, .css_blind article h4, .css_blind article .H4 {
+  margin: 0 0 0.8em 0;
+}
+.css_blind article ul, .css_blind article ol {
+  margin: 0 15px 1em 20px;
+}
+.css_blind article ul li, .css_blind article ol li {
+  margin: 0 0 0.6em 0;
+  list-style: none;
+  position: relative;
+}
+.css_blind article ul li:before {
+  content: '\25CF';
+  position: absolute;
+  top: -2px;
+  left: -20px;
+}
+.css_blind article ul ul {
+  margin: 0 0 20px 0;
+}
+.css_blind article ul ul li:before {
+  content: '-';
+  position: static;
+  color: inherit;
+  margin: 0 5px 0 0;
+}
+.css_blind article ol {
+  counter-reset: item;
+}
+.css_blind article ol > li:before {
+  content: counter(item) ".";
+  counter-increment: item;
+  position: absolute;
+  left: -20px;
+  top: 0;
+}
+.css_blind article ol ul {
+  margin: 0 0 20px 25px;
+}
+.css_blind article ol p {
+  margin: 0 0 20px 0;
+}
+.css_blind article table {
+  max-width: 100%;
+  border-spacing: 0;
+  margin: 0 0 50px 0;
+}
+.css_blind article table td {
+  vertical-align: top;
+  padding: 10px 15px;
+}
+.css_blind article table tr td:first-child {
+  border-left: none;
+}
+.css_blind article table th {
+  border-bottom: none;
+  padding: 20px 15px;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+}
+.css_blind article table thead tr td {
+  border-bottom: none;
+  padding: 20px 15px;
+  text-transform: uppercase;
+  text-align: center;
+  background: transparent !important;
+  vertical-align: middle;
+}
+.color_white .css_blind article table td {
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.color_white .css_blind article table th, .color_white .css_blind article table thead tr {
+  background: #000;
+  color: #fff;
+}
+.color_black .css_blind article table td {
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.color_black .css_blind article table th, .color_black .css_blind article table thead tr {
+  background: #fff;
+  color: #000;
+}
+.color_blue .css_blind article table td {
+  border-left: 1px solid #063462;
+  border-bottom: 1px solid #063462;
+}
+.color_blue .css_blind article table th, .color_blue .css_blind article table thead tr {
+  background: #063462;
+  color: #9dd1ff;
+}
+.css_blind article section {
+  margin: 0 0 15px 0;
+}
+.css_blind article section h3 {
+  padding: 20px 25px;
+  text-transform: uppercase;
+  margin: 0 0 15px 0;
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+}
+.css_blind article section h3:before {
+  content: '\25BC';
+  display: block;
+  width: 22px;
+  height: 13px;
+  float: right;
+  margin: 0 0 0 25px;
+}
+.css_blind article section h3.open:before {
+  content: '\25B2';
+}
+.color_white .css_blind article section h3 {
+  border: 2px solid #000;
+}
+.color_white .css_blind article section h3:hover {
+  background: #000;
+  color: #fff;
+}
+.color_black .css_blind article section h3 {
+  border: 2px solid #fff;
+}
+.color_black .css_blind article section h3:hover {
+  color: #000;
+  background: #fff;
+}
+.color_blue .css_blind article section h3 {
+  border: 2px solid #063462;
+}
+.color_blue .css_blind article section h3:hover {
+  background: #063462;
+  color: #9dd1ff;
+}
+.css_blind article .main_img {
+  margin: 0 0 30px 0;
+  float: left;
+}
+.css_blind article .main_img + h2 {
+  margin: 0 0 0.8em 230px;
+}
+.css_blind article .main_img + h2 + ul {
+  margin: 0 25px 20px 250px;
+}
+.css_blind article .attention {
+  padding: 20px 30px;
+  margin: 0 0 1.5em 0;
+}
+.css_blind article .attention h2 {
+  margin: 0 0 1em 0;
+}
+.color_white .css_blind article .attention {
+  border: 2px solid #000;
+}
+.color_black .css_blind article .attention {
+  border: 2px solid #fff;
+}
+.color_blue .css_blind article .attention {
+  border: 2px solid #063462;
+}
+.css_blind article .item_info {
+  margin: 0 0 1em 0;
+}
+.css_blind article .item_info div {
+  margin: 0 0 0.5em 0;
+}
+.css_blind article figure {
+  display: block;
+  margin: 0 0 1em 0;
+}
+.image_on .css_blind article figure img {
+  display: block;
+  margin: 0 0 10px 0;
+  max-width: 100%;
+  height: auto;
+}
+.image_off .css_blind article figure img {
+  display: none;
+}
+.color_white .css_blind article figure img {
+  border: 1px solid #000;
+}
+.color_black .css_blind article figure img {
+  border: 1px solid #fff;
+}
+.color_blue .css_blind article figure img {
+  border: 1px solid #063462;
+}
+.css_blind article .picture_block {
+  margin: 0 0 1em 0;
+}
+.image_on .css_blind article .picture_block figure img {
+  margin: 0 0 10px 0;
+}
+.image_on .css_blind article .picture_block.left figure {
+  float: left;
+}
+.image_on .css_blind article .picture_block.left .txt {
+  margin: 0 0 0 310px;
+}
+.image_on .css_blind article .picture_block.right figure {
+  float: right;
+}
+.image_on .css_blind article .picture_block.right .txt {
+  margin: 0 310px 0 0;
+}
+.css_blind article .video_box {
+  margin: 0 0 2em 0;
+}
+.css_blind article .video_link {
+  padding: 30px;
+  margin: 0 0 40px 0;
+  text-align: center;
+  font-size: 1.2em;
+}
+.css_blind article .video_link .ico {
+  display: none;
+}
+.css_blind article .video_link .text {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+}
+.css_blind article .video_link a {
+  display: inline-block;
+  padding: 10px 30px;
+  text-decoration: none;
+}
+.color_white .css_blind article .video_link {
+  border: 5px solid #000;
+}
+.color_white .css_blind article .video_link a {
+  background: #000;
+  color: #fff;
+}
+.color_black .css_blind article .video_link {
+  border: 5px solid #fff;
+}
+.color_black .css_blind article .video_link a {
+  background: #fff;
+  color: #000;
+}
+.color_blue .css_blind article .video_link {
+  border: 5px solid #063462;
+}
+.color_blue .css_blind article .video_link a {
+  background: #063462;
+  color: #9dd1ff;
+}
+.css_blind article .js-accordion {
+  margin: 0 0 50px 0;
+}
+.css_blind article .js-accordion .js-accordionBox {
+  margin: 0 0 20px 0;
+}
+.css_blind .paragraph {
+  margin: 0 15px 1em 15px;
+}
+.css_blind .person_list {
+  margin: 0 0 50px 0;
+}
+.css_blind .person_list .person_box {
+  margin: 0 15px 30px 15px;
+  padding: 25px;
+  overflow: hidden;
+}
+.css_blind .person_list .person_box .description .name {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 0 1em 0;
+}
+.css_blind .person_list .person_box .description .post {
+  margin: 0 0 20px 0;
+}
+.color_white .css_blind .person_list .person_box {
+  border: 5px solid #000;
+}
+.color_white .css_blind .person_list .person_box .face {
+  border: 1px solid #000;
+}
+.color_black .css_blind .person_list .person_box {
+  border: 5px solid #fff;
+}
+.color_black .css_blind .person_list .person_box .face {
+  border: 1px solid #fff;
+}
+.color_blue .css_blind .person_list .person_box {
+  border: 5px solid #063462;
+}
+.color_blue .css_blind .person_list .person_box .face {
+  border: 1px solid #063462;
+}
+.image_on .css_blind .person_list .person_box .face {
+  width: 155px;
+  float: left;
+}
+.image_on .css_blind .person_list .person_box .face img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.image_on .css_blind .person_list .person_box .description {
+  margin: 0 0 0 180px;
+}
+.image_off .css_blind .person_list .person_box .face {
+  display: none;
+}
+.css_blind .person_card {
+  margin: 0 15px 50px 15px;
+}
+.css_blind .person_card .H2 {
+  margin: 0 0 0.8em 0;
+}
+.css_blind .person_card ul.department_links {
+  margin: 0 0 1em 0;
+  list-style: none;
+  text-transform: uppercase;
+}
+.css_blind .person_card ul.department_links li {
+  margin: 0 0 1em 0;
+}
+.css_blind .person_card ul.department_links li a {
+  text-decoration: none;
+  display: block;
+  padding: 10px 25px;
+}
+.color_white .css_blind .person_card ul.department_links li a {
+  border: 2px solid #000;
+}
+.color_black .css_blind .person_card ul.department_links li a {
+  border: 2px solid #fff;
+}
+.color_blue .css_blind .person_card ul.department_links li a {
+  border: 2px solid #063462;
+}
+.css_blind .person_card .turn_over {
+  position: relative;
+  padding: 25px 80px;
+  margin: 0 0 2em 0;
+}
+.css_blind .person_card .turn_over .prev_person, .css_blind .person_card .turn_over .next_person {
+  display: block;
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+}
+.css_blind .person_card .turn_over .prev_person:before, .css_blind .person_card .turn_over .next_person:before {
+  content: '';
+  width: 25px;
+  height: 55px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -27px 0 0 -12px;
+  display: block;
+}
+.css_blind .person_card .turn_over .prev_person {
+  left: 0;
+}
+.css_blind .person_card .turn_over .next_person {
+  right: 0;
+}
+.color_white .css_blind .person_card .turn_over {
+  border: 2px solid #000;
+}
+.color_white .css_blind .person_card .turn_over .prev_person {
+  border-right: 2px solid #000;
+}
+.color_white .css_blind .person_card .turn_over .prev_person:before {
+  background: transparent url(../img/sprite-blind.png) -427px 0 no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_white .css_blind .person_card .turn_over .next_person {
+  border-left: 2px solid #000;
+}
+.color_white .css_blind .person_card .turn_over .next_person:before {
+  background: transparent url(../img/sprite-blind.png) -459px 0 no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black .css_blind .person_card .turn_over {
+  border: 2px solid #fff;
+}
+.color_black .css_blind .person_card .turn_over .prev_person {
+  border-right: 2px solid #fff;
+}
+.color_black .css_blind .person_card .turn_over .prev_person:before {
+  background: transparent url(../img/sprite-blind.png) -492px 0 no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black .css_blind .person_card .turn_over .next_person {
+  border-left: 2px solid #fff;
+}
+.color_black .css_blind .person_card .turn_over .next_person:before {
+  background: transparent url(../img/sprite-blind.png) -524px 0 no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue .css_blind .person_card .turn_over {
+  border: 2px solid #063462;
+}
+.color_blue .css_blind .person_card .turn_over .prev_person {
+  border-right: 2px solid #063462;
+}
+.color_blue .css_blind .person_card .turn_over .prev_person:before {
+  background: transparent url(../img/sprite-blind.png) -558px 0 no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue .css_blind .person_card .turn_over .next_person {
+  border-left: 2px solid #063462;
+}
+.color_blue .css_blind .person_card .turn_over .next_person:before {
+  background: transparent url(../img/sprite-blind.png) -589px 0 no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_white .css_blind .person_card .about_person img {
+  border: 1px solid #000;
+}
+.color_black .css_blind .person_card .about_person img {
+  border: 2px solid #fff;
+}
+.color_blue .css_blind .person_card .about_person img {
+  border: 2px solid #063462;
+}
+.image_on .css_blind .person_card .about_person img {
+  float: left;
+  display: block;
+  margin: 0 0 20px 0;
+}
+.image_on .css_blind .person_card .about_person h2 {
+  margin: 0 0 20px 270px;
+}
+.image_on .css_blind .person_card .about_person .post {
+  margin: 0 0 20px 270px;
+}
+.image_off .css_blind .person_card .about_person img {
+  display: none;
+}
+.image_off .css_blind .person_card .about_person h2 {
+  margin: 0 0 20px 0;
+}
+.image_off .css_blind .person_card .about_person .post {
+  margin: 0 0 20px 0;
+}
+.css_blind .structure_list {
+  margin: 0 15px 50px 15px;
+}
+.css_blind .structure_list .depart_block {
+  display: table;
+  width: 100%;
+  padding: 30px;
+  margin: 0 0 30px 0;
+  overflow: hidden;
+}
+.css_blind .structure_list .depart_block .person {
+  display: table-cell;
+  vertical-align: top;
+  width: 50%;
+  padding: 45px 30px 45px 0;
+}
+.css_blind .structure_list .depart_block .person div {
+  margin: 0 0 7px 0;
+}
+.css_blind .structure_list .depart_block .person .name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.image_on .css_blind .structure_list .depart_block .person img {
+  width: 120px;
+  height: auto;
+  float: left;
+}
+.image_on .css_blind .structure_list .depart_block .person .pers_info {
+  margin: 0 0 0 140px;
+}
+.image_off .css_blind .structure_list .depart_block .person img {
+  display: none;
+}
+.color_white .css_blind .structure_list .depart_block {
+  border: 5px solid #000;
+}
+.color_white .css_blind .structure_list .depart_block .person img {
+  border: 1px solid #000;
+}
+.color_black .css_blind .structure_list .depart_block {
+  border: 5px solid #fff;
+}
+.color_black .css_blind .structure_list .depart_block .person img {
+  border: 1px solid #fff;
+}
+.color_blue .css_blind .structure_list .depart_block {
+  border: 5px solid #063462;
+}
+.color_blue .css_blind .structure_list .depart_block .person img {
+  border: 1px solid #063462;
+}
+.css_blind .structure_list .links {
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%;
+  padding: 0 0 0 20px;
+}
+.css_blind .structure_list .departament_link {
+  display: table;
+  width: 100%;
+  text-decoration: none;
+  padding: 15px;
+  margin: 10px 0;
+}
+.css_blind .structure_list .departament_link .txt {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+.css_blind .structure_list .departament_link .ico, .css_blind .structure_list .departament_link .arrrow {
+  display: none;
+}
+.color_white .css_blind .structure_list .departament_link {
+  border: 2px solid #000;
+}
+.color_black .css_blind .structure_list .departament_link {
+  border: 2px solid #fff;
+}
+.color_blue .css_blind .structure_list .departament_link {
+  border: 2px solid #063462;
+}
+.css_blind #territorial_authorities {
+  margin: 0 15px 50px 15px;
+}
+.css_blind #territorial_authorities .page_filter {
+  margin: 0 0 30px 0;
+}
+.css_blind #territorial_authorities .js-tabNav {
+  display: none;
+}
+.css_blind #territorial_authorities .js-accordion {
+  margin: 0 0 50px 0;
+}
+.css_blind #territorial_authorities .js-accordion .js-accordionBox {
+  margin: 0 0 20px 0;
+}
+.css_blind #territorial_authorities #on_list {
+  display: block !important;
+}
+.css_blind #territorial_authorities #on_map {
+  display: none !important;
+}
+.css_blind #structure_scheme {
+  margin: 0 15px 50px 15px;
+}
+.css_blind #structure_scheme .top_level {
+  position: relative;
+  margin: 0 0 50px 0;
+  z-index: 1;
+}
+.css_blind #structure_scheme .top_level .bg_img {
+  display: none;
+}
+.css_blind #structure_scheme .top_level .txt_layer {
+  display: block;
+  text-decoration: none;
+  padding: 50px;
+  font-weight: bold;
+}
+.css_blind #structure_scheme .top_level .txt_layer .title {
+  margin: 0 0 25px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 60px;
+}
+.css_blind #structure_scheme .top_level .txt_layer .num {
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 125px;
+  line-height: 95px;
+}
+.css_blind #structure_scheme .top_level .txt_layer .small {
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 18px;
+  text-transform: uppercase;
+  width: 230px;
+  margin: 0 0 0 10px;
+}
+.css_blind #structure_scheme .top_level .txt_layer:before {
+  content: '\25B6';
+  font-size: 40px;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+.color_white .css_blind #structure_scheme .top_level {
+  border: 5px solid #000;
+  background: #fff;
+}
+.color_black .css_blind #structure_scheme .top_level {
+  border: 5px solid #fff;
+  background: #000;
+}
+.color_blue .css_blind #structure_scheme .top_level {
+  border: 5px solid #063462;
+  background: #9dd1ff;
+}
+.css_blind #structure_scheme .scheme_level {
+  min-height: 145px;
+  display: table;
+  width: 75%;
+  text-decoration: none;
+  position: relative;
+  margin: 0 0 40px 0;
+  font-weight: bold;
+}
+.css_blind #structure_scheme .scheme_level:after {
+  content: '';
+  display: block;
+  width: 5px;
+  position: absolute;
+  top: -100%;
+}
+.css_blind #structure_scheme .scheme_level .num_box {
+  display: table-cell;
+  vertical-align: top;
+  width: 35%;
+  padding: 20px;
+  text-transform: uppercase;
+}
+.css_blind #structure_scheme .scheme_level .num_box div {
+  display: block;
+}
+.css_blind #structure_scheme .scheme_level .num_box .num {
+  width: 23%;
+  font-size: 3em;
+}
+.css_blind #structure_scheme .scheme_level .title {
+  font-weight: bold;
+  position: relative;
+  display: table-cell;
+  vertical-align: top;
+  padding: 20px 50px 20px 25px;
+}
+.css_blind #structure_scheme .scheme_level .title:before {
+  content: '\25B6';
+  font-size: 40px;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+.css_blind #structure_scheme .scheme_level.level01 {
+  margin: 0 15% 40px 10%;
+}
+.css_blind #structure_scheme .scheme_level.level01:after {
+  height: 50px;
+  top: -53px;
+  left: 50%;
+}
+.css_blind #structure_scheme .scheme_level.level02 {
+  margin: 0 3% 40px 22%;
+}
+.css_blind #structure_scheme .scheme_level.level02:after {
+  height: 357px;
+  top: -360px;
+  right: 35px;
+}
+.css_blind #structure_scheme .scheme_level.level03 {
+  margin: 0 25% 40px 0;
+}
+.css_blind #structure_scheme .scheme_level.level03:after {
+  height: 665px;
+  top: -660px;
+  left: 30px;
+}
+.color_white .css_blind #structure_scheme .scheme_level {
+  border: 3px solid #000;
+  background: #fff;
+}
+.color_white .css_blind #structure_scheme .scheme_level:after {
+  background: #000;
+}
+.color_white .css_blind #structure_scheme .scheme_level .num_box {
+  background: #000;
+  color: #fff;
+}
+.color_black .css_blind #structure_scheme .scheme_level {
+  border: 3px solid #fff;
+  background: #000;
+}
+.color_black .css_blind #structure_scheme .scheme_level:after {
+  background: #fff;
+}
+.color_black .css_blind #structure_scheme .scheme_level .num_box {
+  background: #fff;
+  color: #000;
+}
+.color_blue .css_blind #structure_scheme .scheme_level {
+  border: 3px solid #063462;
+  background: #9dd1ff;
+}
+.color_blue .css_blind #structure_scheme .scheme_level:after {
+  background: #063462;
+}
+.color_blue .css_blind #structure_scheme .scheme_level .num_box {
+  background: #063462;
+  color: #9dd1ff;
+}
+.css_blind .find_office {
+  margin: 0 15px 50px 15px;
+  padding: 30px 15px;
+  text-align: center;
+}
+.css_blind .find_office h2 {
+  margin: 0 0 0.8em 0;
+}
+.color_white .css_blind .find_office {
+  border: 3px solid #000;
+}
+.color_black .css_blind .find_office {
+  border: 3px solid #fff;
+}
+.color_blue .css_blind .find_office {
+  border: 3px solid #063462;
+}
+.css_blind .central_info {
+  margin: 0 45px 50px 45px;
+}
+.css_blind .central_info .unit {
+  margin: 0 0 20px 0;
+}
+.css_blind .central_info .unit div {
+  margin: 0 0 5px 0;
+}
+.css_blind .central_info .title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.css_blind .central_info .address_col {
+  width: 65%;
+  float: left;
+  margin: 0 0 20px 0;
+}
+.css_blind .central_info .phones_col {
+  width: 35%;
+  float: left;
+  margin: 0 0 20px 0;
+}
+.css_blind .central_info .links_list {
+  width: 65%;
+  margin: 0;
+}
+.css_blind .central_info .links_list li a {
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+.css_blind .office_info {
+  margin: 0 0 2em 0;
+}
+.css_blind .office_info h3 {
+  margin: 0 0 10px 0;
+}
+.css_blind .office_info div {
+  margin: 0 0 10px 0;
+}
+.css_blind .office_boss {
+  display: table;
+  margin: 0 0 2em 0;
+}
+.css_blind .office_boss .apout {
+  text-transform: uppercase;
+}
+.css_blind .office_boss .apout .name {
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
+.image_on .css_blind .office_boss .img {
+  display: table-cell;
+}
+.image_on .css_blind .office_boss .img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #666;
+}
+.image_on .css_blind .office_boss .apout {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 15px;
+}
+.image_off .css_blind .office_boss .img {
+  display: none;
+}
+.color_white .css_blind .office_boss .img img {
+  border: 2px solid #000;
+}
+.color_black .css_blind .office_boss .img img {
+  border: 2px solid #fff;
+}
+.color_blue .css_blind .office_boss .img img {
+  border: 2px solid #063462;
+}
+.css_blind .faq_list .H4 {
+  margin: 0 0 0.8em 0;
+}
+.css_blind .faq_list .js-tab {
+  padding: 20px 0 0 0;
+}
+.css_blind ol.open_list {
+  margin: 0 0 40px 0;
+  list-style: none;
+}
+.css_blind ol.open_list .open_title {
+  margin: 0 0 1em 0;
+  position: relative;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.css_blind ol.open_list .open_title small {
+  display: none;
+}
+.css_blind ol.open_list .open_title:before {
+  content: '\25BC';
+  margin: 0 10px 0 0;
+}
+.css_blind ol.open_list .open_title.open:before {
+  content: '\25B2';
+}
+.css_blind ol.open_list .list_box {
+  list-style: none;
+  margin: 0 0 1em 0;
+}
+.css_blind ul.links_list {
+  margin: 0 15px 50px 15px;
+}
+.css_blind ul.links_list li {
+  list-style: none;
+  margin: 0 0 2em 0;
+}
+.css_blind ul.links_list li a {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+}
+.css_blind ul.links_list .else {
+  margin: 10px 0;
+}
+.css_blind ul.links_list .open_title {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 0 10px 0;
+}
+.css_blind ul.links_list .open_title.open {
+  border-bottom: none;
+}
+.color_white .css_blind ul.links_list .open_title {
+  border-bottom: 1px dashed #000;
+}
+.color_black .css_blind ul.links_list .open_title {
+  border-bottom: 1px dashed #fff;
+}
+.color_blue .css_blind ul.links_list .open_title {
+  border-bottom: 1px dashed #063462;
+}
+.css_blind .open_more {
+  margin: 0 15px 50px 15px;
+  text-align: center;
+}
+.css_blind .open_more .js-openHideList {
+  display: inline-block;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.color_white .css_blind .open_more .js-openHideList {
+  border: 2px solid #000;
+}
+.color_black .css_blind .open_more .js-openHideList {
+  border: 2px solid #fff;
+}
+.color_blue .css_blind .open_more .js-openHideList {
+  border: 2px solid #063462;
+}
+.css_blind .video_anons {
+  margin: 0 15px 50px 0;
+}
+.css_blind .video_anons .video_box {
+  display: inline-block;
+  vertical-align: top;
+  width: 49%;
+  padding: 0 5px 0 15px;
+  text-align: center;
+}
+.css_blind .video_anons .video_box .text {
+  display: block;
+  padding: 20px 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+}
+.image_on .css_blind .video_anons .video_box .prev {
+  display: block;
+  position: relative;
+}
+.image_on .css_blind .video_anons .video_box .prev img {
+  width: 100%;
+  height: auto;
+}
+.image_on .css_blind .video_anons .video_box .play_ico {
+  width: 40%;
+  position: absolute;
+  left: 31%;
+  top: 22%;
+}
+.image_on .css_blind .video_anons .video_box .play_ico img {
+  width: 100%;
+  height: auto;
+}
+.image_off .css_blind .video_anons .video_box .prev {
+  display: none;
+}
+.color_white.image_off .css_blind .video_anons .video_box .text {
+  background: #000;
+  color: #fff;
+}
+.color_black.image_off .css_blind .video_anons .video_box .text {
+  background: #fff;
+  color: #000;
+}
+.color_blue.image_off .css_blind .video_anons .video_box .text {
+  background: #063462;
+  color: #9dd1ff;
+}
+.color_white .css_blind .video_anons .video_box .prev > img {
+  border: 2px solid #000;
+}
+.color_black .css_blind .video_anons .video_box .prev > img {
+  border: 2px solid #fff;
+}
+.color_blue .css_blind .video_anons .video_box .prev > img {
+  border: 2px solid #063462;
+}
+.css_blind .video_links {
+  margin: 0 15px 50px 15px;
+}
+.css_blind .video_links .H3 {
+  margin: 0 0 0.8em 0;
+}
+.css_blind .video_links .link {
+  display: block;
+  text-decoration: none;
+  padding: 20px 35px;
+  margin: 0 0 25px 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.css_blind .video_links .link .video_ico {
+  display: none;
+}
+.color_white .css_blind .video_links .link {
+  border: 5px solid #000;
+}
+.color_black .css_blind .video_links .link {
+  border: 5px solid #fff;
+}
+.color_blue .css_blind .video_links .link {
+  border: 5px solid #063462;
+}
+.css_blind .helpful_info {
+  margin: 0 15px 50px 15px;
+}
+.css_blind .helpful_info .H3 {
+  margin: 0 0 0.8em 0;
+}
+.css_blind .helpful_info .help {
+  margin: 0 0 25px 0;
+}
+.css_blind .helpful_info .help .ico {
+  display: none;
+}
+.css_blind .helpful_info .help .txt {
+  display: block;
+  text-decoration: none;
+  padding: 20px 35px;
+  margin: 0 0 25px 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.color_white .css_blind .helpful_info .help .txt {
+  border: 5px solid #000;
+}
+.color_black .css_blind .helpful_info .help .txt {
+  border: 5px solid #fff;
+}
+.color_blue .css_blind .helpful_info .help .txt {
+  border: 5px solid #063462;
+}
+.css_blind #round_info {
+  margin: 0 15px 50px 15px;
+  position: relative;
+  overflow: hidden;
+}
+.css_blind #round_info .bg_layer, .css_blind #round_info .svg_layer {
+  display: none;
+}
+.css_blind #round_info .blind_title {
+  margin: 0 0 0.8em 0;
+}
+.css_blind #round_info .txt_layer .svg_link {
+  display: inline-block;
+  vertical-align: top;
+  width: 47%;
+  font-size: 1.3em;
+  text-decoration: none;
+  padding: 15px;
+  margin: 0 2% 25px 0;
+  text-align: center;
+}
+.color_white .css_blind #round_info .txt_layer .svg_link {
+  border: 5px solid #000;
+}
+.color_black .css_blind #round_info .txt_layer .svg_link {
+  border: 5px solid #fff;
+}
+.color_blue .css_blind #round_info .txt_layer .svg_link {
+  border: 5px solid #063462;
+}
+.css_blind .docs_pager .viewport {
+  overflow: hidden;
+  position: relative;
+}
+.css_blind .docs_pager .page_list {
+  list-style: none;
+  margin: 0;
+}
+.css_blind .docs_pager .page_list li {
+  margin: 0;
+  position: absolute;
+  top: 0;
+}
+.css_blind .doc_block .docs_box {
+  margin: 0 0 30px 0;
+}
+.css_blind .doc_block .docs_box .description {
+  font-weight: bold;
+}
+.css_blind .doc_block .search_link {
+  display: inline-block;
+  float: right;
+  margin: -50px 30px 0 0;
+  text-transform: uppercase;
+}
+.css_blind .doc_block .page_nav {
+  float: right;
+  text-align: right;
+}
+.css_blind .doc_block .prew_link, .css_blind .doc_block .next_link {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  margin: 0 20px 20px 0;
+  cursor: pointer;
+}
+.color_white .css_blind .doc_block .prew_link {
+  background: transparent url(../img/sprite-blind.png) -391px -80px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_white .css_blind .doc_block .prew_link:hover {
+  background: transparent url(../img/sprite-blind.png) -391px -119px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black .css_blind .doc_block .prew_link {
+  background: transparent url(../img/sprite-blind.png) -391px -119px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black .css_blind .doc_block .prew_link:hover {
+  background: transparent url(../img/sprite-blind.png) -391px -80px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue .css_blind .doc_block .prew_link {
+  background: transparent url(../img/sprite-blind.png) -391px -158px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue .css_blind .doc_block .prew_link:hover {
+  background: transparent url(../img/sprite-blind.png) -391px -196px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_white .css_blind .doc_block .next_link {
+  background: transparent url(../img/sprite-blind.png) -431px -80px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_white .css_blind .doc_block .next_link:hover {
+  background: transparent url(../img/sprite-blind.png) -431px -119px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black .css_blind .doc_block .next_link {
+  background: transparent url(../img/sprite-blind.png) -431px -119px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black .css_blind .doc_block .next_link:hover {
+  background: transparent url(../img/sprite-blind.png) -431px -80px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue .css_blind .doc_block .next_link {
+  background: transparent url(../img/sprite-blind.png) -431px -158px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue .css_blind .doc_block .next_link:hover {
+  background: transparent url(../img/sprite-blind.png) -431px -196px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.css_blind .icon_tabs .open_info {
+  display: none;
+  margin: 0 0 15px 0;
+}
+.css_blind .icon_tabs > .ico_link {
+  display: none;
+}
+.css_blind .icon_tabs .ico_link.slide_button {
+  padding: 20px 35px;
+  margin: 0 0 15px 0;
+}
+.css_blind .icon_tabs .ico_link.slide_button .info_ico {
+  display: none;
+}
+.css_blind .icon_tabs .ico_link.slide_button .txt {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.color_white .css_blind .icon_tabs .ico_link.slide_button {
+  border: 5px solid #000;
+}
+.color_black .css_blind .icon_tabs .ico_link.slide_button {
+  border: 5px solid #fff;
+}
+.color_blue .css_blind .icon_tabs .ico_link.slide_button {
+  border: 5px solid #063462;
+}
+.css_blind .service_info {
+  margin: 0 15px 50px 15px;
+}
+.css_blind .service_info h3 {
+  margin: 0 0 0.8em 0;
+}
+.css_blind .service_info .open_info {
+  padding: 30px 40px;
+}
+.css_blind .service_info .info {
+  display: block !important;
+}
+.css_blind .service_info .links {
+  text-align: center;
+}
+.css_blind .service_info .links .button {
+  margin: 20px 5px;
+}
+.css_blind .service_info .infoblock {
+  margin: 0 0 30px 0;
+}
+.css_blind .service_info .infoblock .ico {
+  display: none;
+}
+.css_blind .service_info .infoblock .H3 {
+  font-size: 1em;
+  margin: 5px 0;
+}
+.css_blind .service_info .arrow_tabs .arr_link {
+  padding: 10px;
+}
+.css_blind .service_info .arrow_tabs .js-tab {
+  padding: 10px 30px;
+}
+.css_blind .about_payment {
+  margin: 0 15px 50px 15px;
+  text-align: center;
+  overflow: hidden;
+}
+.css_blind .about_payment .H2 {
+  margin: 0 0 0.8em 0;
+}
+.css_blind .about_payment .blue {
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+}
+.css_blind .about_payment .price {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.css_blind .about_payment .unit_left, .css_blind .about_payment .unit_right {
+  width: 50%;
+}
+.css_blind .about_payment .unit_left img, .css_blind .about_payment .unit_right img {
+  display: none;
+}
+.css_blind .about_payment .unit_left {
+  float: left;
+}
+.color_white .css_blind .about_payment .unit_left {
+  border-right: 2px solid #000;
+}
+.color_black .css_blind .about_payment .unit_left {
+  border-right: 2px solid #fff;
+}
+.color_blue .css_blind .about_payment .unit_left {
+  border-right: 2px solid #063462;
+}
+.css_blind .about_payment .unit_right {
+  float: right;
+}
+.css_blind .banner_list {
+  margin: 0 15px 50px 15px;
+}
+.css_blind .info_banner {
+  margin: 0 0 20px 0;
+  overflow: hidden;
+  padding: 40px 60px 20px 60px;
+}
+.css_blind .info_banner .ico {
+  display: none;
+}
+.css_blind .info_banner .H4 {
+  margin: 0 0 0.8em 0;
+}
+.color_white .css_blind .info_banner {
+  border: 5px solid #000;
+}
+.color_black .css_blind .info_banner {
+  border: 5px solid #fff;
+}
+.color_blue .css_blind .info_banner {
+  border: 5px solid #063462;
+}
+.css_blind .doc_need {
+  margin: 0 15px 20px 15px;
+  overflow: hidden;
+  padding: 40px 60px 20px 60px;
+}
+.css_blind .doc_need a {
+  text-transform: uppercase;
+}
+.css_blind .doc_need .ico {
+  display: none;
+}
+.css_blind .doc_need .H2 {
+  margin: 0 0 0.8em 0;
+}
+.color_white .css_blind .doc_need {
+  border: 5px solid #000;
+}
+.color_black .css_blind .doc_need {
+  border: 5px solid #fff;
+}
+.color_blue .css_blind .doc_need {
+  border: 5px solid #063462;
+}
+.css_blind .main_info {
+  margin: 0 15px 50px 15px;
+}
+.css_blind .main_info strong {
+  font-size: 1.2em;
+}
+.css_blind .main_info img {
+  display: none;
+}
+.css_blind .eservice_list {
+  margin: 0 15px 50px 15px;
+}
+.css_blind .eservice_list .js-filter {
+  margin: 0 0 10px 0;
+}
+.css_blind .eservice_list .eservice_box {
+  padding: 20px 35px;
+  margin: 0 0 20px 0;
+  position: relative;
+}
+.css_blind .eservice_list .eservice_box img, .css_blind .eservice_list .eservice_box span {
+  display: none;
+}
+.css_blind .eservice_list .eservice_box .service_title {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  margin: 0 0 5px 0;
+}
+.color_white .css_blind .eservice_list .eservice_box {
+  border: 5px solid #000;
+}
+.color_black .css_blind .eservice_list .eservice_box {
+  border: 5px solid #fff;
+}
+.color_blue .css_blind .eservice_list .eservice_box {
+  border: 5px solid #063462;
+}
+.css_blind .doing_list {
+  margin: 0 15px 50px 15px;
+}
+.css_blind .doing_list .doing_box {
+  margin: 0 0 25px 0;
+}
+.css_blind .doing_list .doing_box .doing_title {
+  padding: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+.css_blind .doing_list .doing_box .doing_title .ico {
+  display: none;
+}
+.css_blind .doing_list .doing_box .doing_title .H3 {
+  margin: 0 0 15px 0;
+}
+.css_blind .doing_list .doing_box .doing_title .text {
+  margin: 0 0 15px 0;
+}
+.css_blind .doing_list .doing_box .doing_title.open .show_parts {
+  display: none;
+}
+.css_blind .doing_list .doing_box .parts {
+  padding: 0 30px 30px;
+}
+.css_blind .doing_list .doing_box .links_list {
+  margin: 0 0 30px 0;
+  text-align: left;
+}
+.css_blind .doing_list .doing_box .links_list li {
+  margin: 0 0 20px 0;
+}
+.css_blind .doing_list .doing_box .links_list li a {
+  display: block;
+  padding: 10px 20px;
+}
+.css_blind .doing_list .doing_box .show_parts, .css_blind .doing_list .doing_box .close span {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 10px 30px;
+}
+.css_blind .doing_list .doing_box .close {
+  text-align: center;
+}
+.color_white .css_blind .doing_list .doing_box {
+  border: 5px solid #000;
+}
+.color_white .css_blind .doing_list .doing_box .show_parts, .color_white .css_blind .doing_list .doing_box .close span {
+  background: #000;
+  color: #fff;
+}
+.color_white .css_blind .doing_list .doing_box .links_list li a {
+  border: 2px solid #000;
+}
+.color_black .css_blind .doing_list .doing_box {
+  border: 5px solid #fff;
+}
+.color_black .css_blind .doing_list .doing_box .show_parts, .color_black .css_blind .doing_list .doing_box .close span {
+  background: #fff;
+  color: #000;
+}
+.color_black .css_blind .doing_list .doing_box .links_list li a {
+  border: 2px solid #fff;
+}
+.color_blue .css_blind .doing_list .doing_box {
+  border: 5px solid #063462;
+}
+.color_blue .css_blind .doing_list .doing_box .show_parts, .color_blue .css_blind .doing_list .doing_box .close span {
+  background: #063462;
+  color: #9dd1ff;
+}
+.color_blue .css_blind .doing_list .doing_box .links_list li a {
+  border: 2px solid #063462;
+}
+.css_blind #archive {
+  margin: 0 15px 50px 15px;
+}
+.css_blind #archive h2 {
+  margin: 0 0 .8em 0;
+}
+.css_blind #archive .datepiker_year_select {
+  margin: 0 0 30px 0;
+}
+.css_blind .archive_block {
+  margin: 0 0 40px 0;
+}
+.css_blind .archive_block .media_box {
+  overflow: hidden;
+  padding: 0 0 40px 0;
+}
+.css_blind .media_box .date {
+  text-transform: uppercase;
+}
+.css_blind .media_box .text {
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+}
+.css_blind .media_box .type {
+  display: block;
+}
+.image_on .css_blind .media_box .img {
+  width: 20%;
+  float: left;
+}
+.image_on .css_blind .media_box .img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.image_on .css_blind .media_box .date, .image_on .css_blind .media_box .type {
+  margin: 0 0 5px 23%;
+}
+.image_on .css_blind .media_box .text {
+  margin: 0 0 0 23%;
+}
+.image_off .css_blind .media_box .img {
+  display: none;
+}
+.image_off .css_blind .media_box .date, .image_off .css_blind .media_box .type {
+  margin: 0 0 5px 0;
+}
+.image_off .css_blind .media_box .text {
+  margin: 0 0 0 0;
+}
+.css_blind #media_slider, .css_blind #page_slider, .css_blind #event_slider {
+  margin: 0 15px 50px 15px;
+}
+.css_blind #media_slider h1, .css_blind #page_slider h1, .css_blind #event_slider h1 {
+  margin: 0 0 0.8em 0;
+}
+.css_blind #media_slider .arrow_link, .css_blind #page_slider .arrow_link, .css_blind #event_slider .arrow_link {
+  display: inline-block;
+  margin: -50px 45px 0 0;
+}
+.css_blind #media_slider .date, .css_blind #page_slider .date, .css_blind #event_slider .date {
+  font-size: 1.2em;
+}
+.css_blind #media_slider .main_block, .css_blind #page_slider .main_block, .css_blind #event_slider .main_block {
+  margin: 0 0 20px 0;
+  position: relative;
+}
+.css_blind #media_slider .main_block .viewport img, .css_blind #page_slider .main_block .viewport img, .css_blind #event_slider .main_block .viewport img {
+  width: 100%;
+  height: auto;
+}
+.css_blind #media_slider .main_block .viewport iframe, .css_blind #page_slider .main_block .viewport iframe, .css_blind #event_slider .main_block .viewport iframe {
+  display: block;
+}
+.css_blind #media_slider .img_box, .css_blind #page_slider .img_box, .css_blind #event_slider .img_box {
+  position: relative;
+  overflow: hidden;
+}
+.css_blind #media_slider .img_box .prev_arr, .css_blind #media_slider .img_box .next_arr, .css_blind #page_slider .img_box .prev_arr, .css_blind #page_slider .img_box .next_arr, .css_blind #event_slider .img_box .prev_arr, .css_blind #event_slider .img_box .next_arr {
+  width: 25px;
+  height: 55px;
+  position: absolute;
+  top: 50%;
+  margin: -27px 0 0 0;
+  cursor: pointer;
+}
+.css_blind #media_slider .img_box .prev_arr, .css_blind #page_slider .img_box .prev_arr, .css_blind #event_slider .img_box .prev_arr {
+  left: 25px;
+}
+.color_white .css_blind #media_slider .img_box .prev_arr, .color_white .css_blind #page_slider .img_box .prev_arr, .color_white .css_blind #event_slider .img_box .prev_arr {
+  background: transparent url(../img/sprite-blind.png) -427px 0 no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black .css_blind #media_slider .img_box .prev_arr, .color_black .css_blind #page_slider .img_box .prev_arr, .color_black .css_blind #event_slider .img_box .prev_arr {
+  background: transparent url(../img/sprite-blind.png) -427px 0 no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue .css_blind #media_slider .img_box .prev_arr, .color_blue .css_blind #page_slider .img_box .prev_arr, .color_blue .css_blind #event_slider .img_box .prev_arr {
+  background: transparent url(../img/sprite-blind.png) -558px 0 no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.css_blind #media_slider .img_box .next_arr, .css_blind #page_slider .img_box .next_arr, .css_blind #event_slider .img_box .next_arr {
+  right: 25px;
+}
+.color_white .css_blind #media_slider .img_box .next_arr, .color_white .css_blind #page_slider .img_box .next_arr, .color_white .css_blind #event_slider .img_box .next_arr {
+  background: transparent url(../img/sprite-blind.png) -458px 0 no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black .css_blind #media_slider .img_box .next_arr, .color_black .css_blind #page_slider .img_box .next_arr, .color_black .css_blind #event_slider .img_box .next_arr {
+  background: transparent url(../img/sprite-blind.png) -458px 0 no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue .css_blind #media_slider .img_box .next_arr, .color_blue .css_blind #page_slider .img_box .next_arr, .color_blue .css_blind #event_slider .img_box .next_arr {
+  background: transparent url(../img/sprite-blind.png) -590px 0 no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.css_blind #media_slider .img_box .zoom_ico, .css_blind #page_slider .img_box .zoom_ico, .css_blind #event_slider .img_box .zoom_ico {
+  width: 52px;
+  height: 51px;
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  cursor: pointer;
+}
+.color_white .css_blind #media_slider .img_box .zoom_ico, .color_white .css_blind #page_slider .img_box .zoom_ico, .color_white .css_blind #event_slider .img_box .zoom_ico {
+  background: transparent url(../img/sprite-blind.png) -625px -62px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black .css_blind #media_slider .img_box .zoom_ico, .color_black .css_blind #page_slider .img_box .zoom_ico, .color_black .css_blind #event_slider .img_box .zoom_ico {
+  background: transparent url(../img/sprite-blind.png) -625px -62px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue .css_blind #media_slider .img_box .zoom_ico, .color_blue .css_blind #page_slider .img_box .zoom_ico, .color_blue .css_blind #event_slider .img_box .zoom_ico {
+  background: transparent url(../img/sprite-blind.png) -625px -126px no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.css_blind #media_slider .video_box, .css_blind #page_slider .video_box, .css_blind #event_slider .video_box {
+  position: relative;
+  padding: 0 0 56.25% 0;
+  height: 0;
+}
+.css_blind #media_slider .video_box iframe, .css_blind #page_slider .video_box iframe, .css_blind #event_slider .video_box iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.css_blind .media_changer {
+  margin: 0 0 25px 0;
+  position: relative;
+  overflow: hidden;
+}
+.css_blind .media_changer .show_list {
+  display: none;
+}
+.css_blind .media_changer .viewport {
+  position: relative;
+}
+.css_blind .media_changer .viewport img {
+  width: 100%;
+  height: auto;
+}
+.css_blind .media_changer .viewport iframe {
+  display: none;
+}
+.css_blind .media_changer .prev_arr, .css_blind .media_changer .next_arr {
+  width: 25px;
+  height: 55px;
+  position: absolute;
+  top: 50%;
+  margin: -27px 0 0 0;
+  cursor: pointer;
+  z-index: 1;
+}
+.css_blind .media_changer .prev_arr {
+  left: 25px;
+}
+.color_white .css_blind .media_changer .prev_arr {
+  background: transparent url(../img/sprite-blind.png) -427px 0 no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black .css_blind .media_changer .prev_arr {
+  background: transparent url(../img/sprite-blind.png) -427px 0 no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue .css_blind .media_changer .prev_arr {
+  background: transparent url(../img/sprite-blind.png) -558px 0 no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.css_blind .media_changer .next_arr {
+  right: 25px;
+}
+.color_white .css_blind .media_changer .next_arr {
+  background: transparent url(../img/sprite-blind.png) -458px 0 no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_black .css_blind .media_changer .next_arr {
+  background: transparent url(../img/sprite-blind.png) -458px 0 no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.color_blue .css_blind .media_changer .next_arr {
+  background: transparent url(../img/sprite-blind.png) -590px 0 no-repeat;
+  /*@media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  	background: $color url(../img/sprite-blind-2x.png) $x $y $repeat;
+  	@include background-size($size);
+  }*/
+}
+.css_blind .media_changer .img_box {
+  position: relative;
+  overflow: hidden;
+}
+.css_blind .media_changer .video_box {
+  position: relative;
+  padding: 0 0 56.25% 0;
+  height: 0;
+}
+.css_blind .media_changer .video_box iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.css_blind .media_changer .folder_list .H4 {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  margin: 0;
+}
+.css_blind .media_changer .folder_list .filter {
+  padding: 10px 0 0 10px;
+  text-align: center;
+}
+.css_blind .media_changer .folder_list .scroll_box {
+  padding: 10px 15px 10px 0;
+}
+.css_blind .media_changer .folder_list .scroll_box .js-scroll {
+  height: 385px;
+  overflow: auto;
+}
+.css_blind .media_changer .folder_list .folder {
+  padding: 10px;
+  margin: 0 20px 10px 10px;
+  border: 2px solid transparent;
+}
+.color_white .css_blind .media_changer {
+  border: 2px solid #000;
+}
+.color_white .css_blind .media_changer .H4 {
+  border-bottom: 5px solid #000;
+}
+.color_white .css_blind .media_changer .folder.active {
+  border: 2px solid #000;
+}
+.color_black .css_blind .media_changer {
+  border: 2px solid #fff;
+}
+.color_black .css_blind .media_changer .H4 {
+  border-bottom: 5px solid #fff;
+}
+.color_black .css_blind .media_changer .folder.active {
+  border: 2px solid #fff;
+}
+.color_blue .css_blind .media_changer {
+  border: 2px solid #063462;
+}
+.color_blue .css_blind .media_changer .H4 {
+  border-bottom: 5px solid #063462;
+}
+.color_blue .css_blind .media_changer .folder.active {
+  border: 2px solid #063462;
+}
+.css_blind .photo_info {
+  margin: 0 0 40px 0;
+}
+.css_blind .photo_info .date {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.css_blind .photo_info .time {
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 0 0 0 10px;
+}
+.css_blind .photo_info .comment {
+  font-size: 1.2em;
+}
+.css_blind .preview_list {
+  margin: 0;
+}
+.css_blind .preview_list .photo_list {
+  margin: 0 0 30px 0;
+}
+.css_blind .preview_list .video_list {
+  margin: 0 0 30px 0;
+}
+.css_blind .preview_list .prew {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30%;
+  margin: 0 2% 30px 0;
+}
+.css_blind .preview_list .prew img {
+  width: 100%;
+  height: auto;
+  margin: 0 0 20px 0;
+  border: 3px solid transparent;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+}
+.color_white .css_blind .preview_list .prew img:hover, .color_white .css_blind .preview_list .prew.act_prev img {
+  border: 3px solid #000;
+}
+.color_black .css_blind .preview_list .prew img:hover, .color_black .css_blind .preview_list .prew.act_prev img {
+  border: 3px solid #fff;
+}
+.color_blue .css_blind .preview_list .prew img:hover, .color_blue .css_blind .preview_list .prew.act_prev img {
+  border: 3px solid #063462;
+}
+.css_blind .bg_grey .width_fix {
+  padding: 30px 0 0 0;
+}
+.color_white .css_blind .bg_grey .width_fix {
+  border-top: 2px solid #000;
+}
+.color_black .css_blind .bg_grey .width_fix {
+  border-top: 2px solid #fff;
+}
+.color_blue .css_blind .bg_grey .width_fix {
+  border-top: 2px solid #063462;
+}
+.css_blind .twitter_block {
+  display: none;
+}
+.css_blind .main_news {
+  margin: 0 0 50px 0;
+  padding: 0 15px 30px 15px;
+}
+.css_blind .main_news .description .date {
+  display: inline-block;
+}
+.css_blind .main_news .description .name {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
+.css_blind .main_news .description .text {
+  margin: 0 0 20px 0;
+}
+.css_blind .main_news .description .detail {
+  text-transform: uppercase;
+}
+.image_on .css_blind .main_news .preview {
+  display: block;
+  width: 40%;
+  float: left;
+  margin: 0 0 20px 0;
+}
+.image_on .css_blind .main_news .preview img {
+  width: 100%;
+  height: auto;
+}
+.image_on .css_blind .main_news .description {
+  margin: 0 0 0 45%;
+}
+.image_off .css_blind .main_news .preview {
+  display: none;
+}
+.css_blind .main_news .soc_block {
+  display: none;
+}
+.color_white .css_blind .main_news {
+  border-bottom: 2px solid #000;
+}
+.color_black .css_blind .main_news {
+  border-bottom: 2px solid #fff;
+}
+.color_blue .css_blind .main_news {
+  border-bottom: 2px solid #063462;
+}
+.css_blind .subscr_banner {
+  padding: 30px 40px;
+  margin: 0 15px 50px 15px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.css_blind .subscr_banner div {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 50px 0 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.color_white .css_blind .subscr_banner {
+  border: 5px solid #000;
+}
+.color_black .css_blind .subscr_banner {
+  border: 5px solid #fff;
+}
+.color_blue .css_blind .subscr_banner {
+  border: 5px solid #063462;
+}
+.css_blind .announcement_list .masonry_box {
+  width: 100%;
+}
+.css_blind .announcement_list .news_box {
+  margin: 0 15px 35px 15px;
+  overflow: hidden;
+}
+.css_blind .announcement_list .news_box .name {
+  display: block;
+  text-decoration: none;
+}
+.css_blind .announcement_list .news_box .text {
+  display: none;
+}
+.image_on .css_blind .announcement_list .news_box .preview {
+  display: block;
+  width: 20%;
+  float: left;
+}
+.image_on .css_blind .announcement_list .news_box .preview img {
+  width: 100%;
+  height: auto;
+}
+.image_on .css_blind .announcement_list .news_box .date {
+  margin: 0 0 5px 23%;
+}
+.image_on .css_blind .announcement_list .news_box .name {
+  margin: 0 0 10px 23%;
+}
+.image_off .css_blind .announcement_list .news_box .preview {
+  display: none;
+}
+.image_off .css_blind .announcement_list .news_box .date {
+  margin: 0 0 5px 0;
+}
+.image_off .css_blind .announcement_list .news_box .name {
+  margin: 0 0 10px 0;
+}
+.css_blind .load_more {
+  margin: 0 15px 50px 15px;
+}
+.css_blind .load_more .blue_button {
+  text-transform: uppercase;
+}
+.css_blind .smi_o_nas {
+  margin: 0 0 50px 0;
+}
+.css_blind .smi_o_nas .arrow_link {
+  float: right;
+  margin: -50px 15px 0 0;
+}
+.css_blind .smi_o_nas .news_box {
+  overflow: hidden;
+  margin: 0 15px 35px 15px;
+}
+.css_blind .smi_o_nas .name {
+  text-decoration: none;
+  margin: 0 0 10px 0;
+}
+.css_blind .smi_o_nas .text, .css_blind .smi_o_nas .detail {
+  display: none;
+}
+.image_on .css_blind .smi_o_nas .preview {
+  width: 80px;
+  float: left;
+}
+.image_on .css_blind .smi_o_nas .preview img {
+  width: 100%;
+  height: auto;
+}
+.image_on .css_blind .smi_o_nas .description {
+  margin: 0 0 0 100px;
+}
+.image_off .css_blind .smi_o_nas .preview {
+  display: none;
+}
+.css_blind .smi_info {
+  margin: 0 15px 50px 15px;
+}
+.css_blind .smi_info .H1, .css_blind .smi_info .H4 {
+  margin: 0 0 0.8em 0;
+}
+.css_blind #materials {
+  margin: 0 0 50px 0;
+}
+.css_blind #materials .arrow_link {
+  display: inline-block;
+  float: none;
+  margin: 0 0 30px 15px;
+}
+.css_blind .multimedia_anons {
+  margin: 0 15px 50px 15px;
+}
+.css_blind .multimedia_anons .H1 {
+  margin: 0 0 0.8em 0;
+}
+.css_blind .multimedia_anons .arrow_link {
+  float: right;
+  margin: -50px 30px 0 0;
+}
+.css_blind .tab_slider {
+  position: relative;
+}
+.css_blind .tab_slider .show_list {
+  display: none;
+}
+.css_blind .tab_slider .viewport {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 50px 0;
+}
+.css_blind .tab_slider .viewport .main_img {
+  width: 65%;
+  height: auto;
+  float: left;
+}
+.css_blind .tab_slider .viewport iframe {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+.css_blind .tab_slider .viewport .slide_panel {
+  width: 35%;
+  float: right;
+  padding: 15px 20px;
+}
+.css_blind .tab_slider .viewport .slide_panel .counter {
+  font: normal 40px/1 Arial, Helvetica sans-serif;
+  white-space: nowrap;
+  margin: 0 0 20px 0;
+}
+.css_blind .tab_slider .viewport .slide_panel .counter small {
+  font: normal 24px/1 Arial, Helvetica sans-serif;
+  margin: 0 0 0 -5px;
+}
+.css_blind .tab_slider .previews {
+  display: block !important;
+}
+.css_blind .tab_slider .previews .js-tabs {
+  margin: 0;
+}
+.css_blind .tab_slider .previews .js-tabNav {
+  overflow: hidden;
+}
+.css_blind .tab_slider .previews .js-tabNav .js-tabLink {
+  display: block;
+  width: 50%;
+  float: left;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+}
+.css_blind .tab_slider .previews .js-tabNav .js-tabLink.active {
+  background: none;
+  color: inherit;
+}
+.css_blind .tab_slider .previews .prew {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  margin: 0 2% 3% 0;
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+}
+.css_blind .tab_slider .previews .prew img {
+  width: 100%;
+  height: auto;
+}
+.css_blind .tab_slider .previews .prew.act_prev, .css_blind .tab_slider .previews .prew:hover {
+  opacity: 0.6;
+}
+.lt-ie9 .css_blind .tab_slider .previews .prew.act_prev, .lt-ie9 .css_blind .tab_slider .previews .prew:hover {
+  filter: alpha(opacity=60);
+}
+.color_white .css_blind .tab_slider .previews {
+  border: 2px solid #000;
+}
+.color_white .css_blind .tab_slider .previews .js-tabLink {
+  background: #000;
+  color: #fff;
+}
+.color_black .css_blind .tab_slider .previews {
+  border: 2px solid #fff;
+}
+.color_black .css_blind .tab_slider .previews .js-tabLink {
+  background: #fff;
+  color: #000;
+}
+.color_blue .css_blind .tab_slider .previews {
+  border: 2px solid #063462;
+}
+.color_blue .css_blind .tab_slider .previews .js-tabLink {
+  background: #063462;
+  color: #9dd1ff;
+}
+.css_blind .tab_slider .js-tab {
+  padding: 15px;
+  border-top: none;
+}
+.css_blind .tab_slider .js-scroll {
+  overflow: auto;
+}
+.image_off .css_blind .tab_slider {
+  display: none;
+}
+.css_blind .joutnals {
+  margin: 0 15px 50px 15px;
+  position: relative;
+}
+.css_blind .joutnals .arrow_link {
+  margin: 0px 0 25px 0;
+}
+.css_blind .joutnals > .js-tabNav {
+  margin: 0 0 30px 0;
+}
+.css_blind .joutnals > .js-tabNav .arr_link {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 30px 15px 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 30px;
+}
+.color_white .css_blind .joutnals > .js-tabNav .arr_link {
+  border: 2px solid #000;
+}
+.color_white .css_blind .joutnals > .js-tabNav .arr_link.active {
+  background: #000;
+  color: #fff;
+}
+.color_black .css_blind .joutnals > .js-tabNav .arr_link {
+  border: 2px solid #fff;
+}
+.color_black .css_blind .joutnals > .js-tabNav .arr_link.active {
+  background: #fff;
+  color: #000;
+}
+.color_blue .css_blind .joutnals > .js-tabNav .arr_link {
+  border: 2px solid #063462;
+}
+.color_blue .css_blind .joutnals > .js-tabNav .arr_link.active {
+  background: #063462;
+  color: #9dd1ff;
+}
+.css_blind .joutnals > .js-tab {
+  padding: 30px;
+  position: relative;
+}
+.color_white .css_blind .joutnals > .js-tab {
+  border-bottom: 3px solid #000;
+  border-top: 3px solid #000;
+}
+.color_black .css_blind .joutnals > .js-tab {
+  border-bottom: 3px solid #fff;
+  border-top: 3px solid #fff;
+}
+.color_blue .css_blind .joutnals > .js-tab {
+  border-bottom: 3px solid #063462;
+  border-top: 3px solid #063462;
+}
+.css_blind .joutnals .journal_info {
+  clear: both;
+}
+.css_blind .joutnals .journal_info .announce_img {
+  margin: 0 0 20px 0;
+  width: 200px;
+  float: left;
+}
+.css_blind .joutnals .journal_info .announce_img img {
+  max-width: 100%;
+  height: auto;
+}
+.css_blind .joutnals .journal_info .announce_text {
+  margin: 0 0 20px 230px;
+}
+.css_blind .joutnals .journal_info .journal_name {
+  display: block;
+  font: normal 20px/1 "Calibri-Bold", Arial, sans-serif;
+  color: #000;
+  margin: 0 0 20px 0;
+  text-decoration: none;
+}
+.css_blind .planer {
+  margin: 0 15px 50px 15px;
+}
+.css_blind .planer .plan_list {
+  margin: 0 0 50px 0;
+}
+.css_blind .planer .plan_list .plan {
+  margin: 0 0 30px 0;
+}
+.css_blind .planer .plan_list .date {
+  margin: 0 0 10px 0;
+}
+.css_blind .planer .plan_list .name {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+}
+.css_blind .picker_carousel {
+  display: none;
+}
+.css_blind .picker_carousel_small {
+  margin: 0 0 30px 0;
+  position: relative;
+}
+.css_blind .picker_carousel_small .arrow {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 15px;
+  border-bottom: 11px solid transparent;
+  border-top: 11px solid transparent;
+}
+.css_blind .picker_carousel_small .arrow.next {
+  right: 10px;
+  border-right: 13px solid transparent;
+}
+.css_blind .picker_carousel_small .arrow.prev {
+  left: 10px;
+  border-left: 13px solid transparent;
+}
+.css_blind .picker_carousel_small .year {
+  text-align: center;
+  padding: 15px 30px;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0 0 20px 0;
+}
+.css_blind .picker_carousel_small .year .icon {
+  display: none;
+}
+.css_blind .picker_carousel_small .month_block {
+  position: relative;
+  text-align: center;
+}
+.css_blind .picker_carousel_small .month_block .month {
+  text-align: left;
+  display: inline-block;
+  vertical-align: middle;
+  width: 14%;
+  margin: 0 1% 10px 1%;
+  padding: 8px 20px;
+  cursor: default;
+}
+.css_blind .picker_carousel_small .month_block .month.activity {
+  cursor: pointer;
+}
+.color_white .css_blind .picker_carousel_small .arrow.next {
+  border-left: 13px solid #000;
+}
+.color_white .css_blind .picker_carousel_small .arrow.prev {
+  border-right: 13px solid #000;
+}
+.color_white .css_blind .picker_carousel_small .year {
+  border-bottom: 2px solid #000;
+}
+.color_white .css_blind .picker_carousel_small .month_block .month.activity {
+  border: 2px solid #000;
+}
+.color_white .css_blind .picker_carousel_small .month_block .month.current {
+  color: #fff;
+  background: #000;
+}
+.color_black .css_blind .picker_carousel_small .arrow.next {
+  border-left: 13px solid #fff;
+}
+.color_black .css_blind .picker_carousel_small .arrow.prev {
+  border-right: 13px solid #fff;
+}
+.color_black .css_blind .picker_carousel_small .year {
+  border-bottom: 2px solid #fff;
+}
+.color_black .css_blind .picker_carousel_small .month_block .month.activity {
+  border: 2px solid #fff;
+}
+.color_black .css_blind .picker_carousel_small .month_block .month.current {
+  color: #000;
+  background: #fff;
+}
+.color_blue .css_blind .picker_carousel_small .arrow.next {
+  border-left: 13px solid #063462;
+}
+.color_blue .css_blind .picker_carousel_small .arrow.prev {
+  border-right: 13px solid #063462;
+}
+.color_blue .css_blind .picker_carousel_small .year {
+  border-bottom: 2px solid #063462;
+}
+.color_blue .css_blind .picker_carousel_small .month_block .month.activity {
+  border: 2px solid #063462;
+}
+.color_blue .css_blind .picker_carousel_small .month_block .month.current {
+  color: #9dd1ff;
+  background: #063462;
+}
+.css_blind .gko_list {
+  margin: 0 15px 50px 15px;
+}
+.css_blind .gko_list .collapse_box {
+  padding: 0 30px;
+}
+.css_blind .gko_list .js-accordionBox {
+  margin: 0 0 20px 0;
+}
+.css_blind .info_title {
+  display: table;
+  width: 100%;
+  padding: 0 150px 0 20px;
+}
+.css_blind .info_title .label, .css_blind .info_title .value {
+  display: table-cell;
+  vertical-align: top;
+  padding: 20px 40px 20px 0;
+}
+.css_blind .info_title .label {
+  font-weight: bold;
+  width: 200px;
+}
+.color_white .css_blind .info_title {
+  border-bottom: 2px solid #000;
+}
+.color_black .css_blind .info_title {
+  border-bottom: 2px solid #fff;
+}
+.color_blue .css_blind .info_title {
+  border-bottom: 2px solid #063462;
+}
+.css_blind .gko_box {
+  display: table;
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+.css_blind .gko_box .info_table {
+  display: table-cell;
+  vertical-align: top;
+}
+.css_blind .gko_box .info_table .row {
+  display: table;
+  width: 100%;
+  padding: 0 0 0 20px;
+}
+.css_blind .gko_box .info_table .row:first-child .label, .css_blind .gko_box .info_table .row:first-child .value {
+  border-top: none;
+}
+.css_blind .gko_box .info_table .label, .css_blind .gko_box .info_table .value {
+  display: table-cell;
+  vertical-align: top;
+  padding: 10px 40px 10px 0;
+}
+.color_white .css_blind .gko_box .info_table .label, .color_white .css_blind .gko_box .info_table .value {
+  border-top: 2px solid #000;
+}
+.color_black .css_blind .gko_box .info_table .label, .color_black .css_blind .gko_box .info_table .value {
+  border-top: 2px solid #fff;
+}
+.color_blue .css_blind .gko_box .info_table .label, .color_blue .css_blind .gko_box .info_table .value {
+  border-top: 2px solid #063462;
+}
+.css_blind .gko_box .info_table .label {
+  font-weight: bold;
+  width: 200px;
+}
+.css_blind .gko_box .status {
+  display: table-cell;
+  vertical-align: middle;
+  width: 150px;
+  text-align: center;
+}
+.css_blind .gko_box .status .ico {
+  text-transform: uppercase;
+}
+.css_blind .gko_box .status .ico span {
+  display: none;
+}
+.css_blind .gko_info {
+  margin: 0 15px 50px 15px;
+}
+.css_blind .gko_info .unit {
+  margin: 0 0 30px 0;
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+}
+.css_blind .gko_info .unit .num {
+  font: bold 100px/0.8 Arial, Helvetica sans-serif;
+}
+.css_blind .gko_info .unit .num_small {
+  font: bold 50px/0.8 Arial, Helvetica sans-serif;
+}
+.css_blind .gko_info .unit .num_small small {
+  display: block;
+}
+.css_blind .gko_info .unit .txt {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.css_blind .gko_info .unit.main {
+  width: 40%;
+  margin: 0 4% 30px 4%;
+}
+.css_blind .gko_info .unit.main .num {
+  float: left;
+  margin: 0 5px 0 0;
+}
+.css_blind .gko_info .unit.main .txt {
+  clear: both;
+}
+.css_blind #gko_container {
+  margin: 0 15px 50px 15px;
+}
+.css_blind #gko_container .docs_box {
+  width: 460px;
+  float: left;
+}
+.css_blind #gko_container .select_period {
+  margin: 0 0 30px 0;
+  width: 440px;
+  float: right;
+  text-align: right;
+}
+.css_blind #gko_container .select_period label {
+  margin: 0 10px 0 0;
+  text-transform: uppercase;
+  color: #000;
+}
+.css_blind #gko_container .select_period .whiteSelect {
+  display: inline-block;
+  vertical-align: middle;
+  width: 300px;
+  text-align: left;
+}
+.css_blind #gko_map_container {
+  display: none;
+}
+
+/* ==========================================================================
+   helpers - Классы модификаторы
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   print - стили печати
+   ========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/*# sourceMappingURL=blind.css.map */
+.read_more{
+  color: #fff;
+    background: #006bc1;
+    text-decoration: none;
+    margin: 0% 44%;
+    padding: 10px;
+    cursor: pointer;
+}
+.read_more:hover{
+  text-decoration: underline;
+}
+.questions{
+  margin-bottom: 30px;
+}
+
+.question{
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.questions .news-list{
+  padding: 0 25px 0 25px;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+.more{
+  margin-bottom: 40px;
+}
+.questions .news-item{
+  margin: 0 0 40px 0;
+  background: #f2f2f2;
+  padding: 20px;
+  color: #000;
+}
+.css_main .central_info .title{
+  text-transform: none !important;
+}
+.fio{
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+@media screen and (max-width: 780px) {
+  .read_more{
+    margin: 0% 37%;
+  }
+}

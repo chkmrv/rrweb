@@ -1,0 +1,251 @@
+
+//// Configuration
+.aui {
+  .form-control,
+  input[type="text"].form-control,
+  input[type="number"].form-control,
+  .FilteredMultiSelect__filter,
+  .FilteredMultiSelect__select {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    margin-bottom: 10px;
+  }
+
+  input[type="checkbox"].form-control{
+    height: auto;
+  }
+
+  .FilteredMultiSelect {
+    margin-bottom: 20px;
+  }
+
+  button {
+    margin-right: 10px;
+  }
+  .col-xs-12 {
+    width: 100%
+  }
+  .col-xs-11 {
+    width: 91.66666667%
+  }
+  .col-xs-10 {
+    width: 83.33333333%
+  }
+  .col-xs-9 {
+    width: 75%
+  }
+  .col-xs-8 {
+    width: 66.66666667%
+  }
+  .col-xs-7 {
+    width: 58.33333333%
+  }
+  .col-xs-6 {
+    width: 50%
+  }
+  .col-xs-5 {
+    width: 41.66666667%
+  }
+  .col-xs-4 {
+    width: 33.33333333%
+  }
+  .col-xs-3 {
+    width: 25%
+  }
+  .col-xs-2 {
+    width: 16.66666667%
+  }
+  .col-xs-1 {
+    width: 8.33333333%
+  }
+  .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .row {
+    margin-right: -15px;
+    margin-left: -15px;
+
+    &:after {
+      clear: both;
+    }
+  }
+
+  .bs-example {
+    margin-top: 20px
+  }
+
+  .btn-danger {
+    float: right;
+  }
+  .cell {
+    //border: 1px solid #ccc;
+    padding: 5px;
+  }
+  .has-error-text {
+    color: red;
+  }
+  .add-row, 
+	.delete-row{
+		display: none;	
+	}
+	
+	.page_search {
+		display: block;
+	}
+	
+	@media (min-width: 1200px) {
+		.container{
+			width: 940px;
+		}
+	}
+	
+	body {
+	  height: 100%;
+	  min-height: 100%;
+	  font: normal 16px/18px "Calibri", Arial, sans-serif;
+	  color: #666;
+	  background: #fff;
+	}
+	
+	
+	
+	#faq {
+		&.actual {
+			.all-theme {
+				display: none;
+			}
+			
+			.paragraph,
+			.faq_link {
+				display: block;
+			}		
+			
+			.js-tabLink.active {
+				display: table-cell;
+			}
+			
+			.js-tabLink.active {
+				font-size: 16px;
+				line-height: 20px;
+			}			
+		
+			.button_tabs{
+				border: 1px solid #a9a8ab;
+				padding: 0;
+			}
+		}
+		
+		.paragraph,
+		.js-tabLink.active,
+		.H4,
+		.faq_link {
+			display:none;
+		}
+				
+		.all-theme,
+		.all-theme .js-tabLink.active	{
+			display: block;
+		}
+		
+		.all-theme .js-tabLink.active {
+			margin-left: 44px;
+			
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		
+		.button_tabs{
+			border: 0;
+			padding: 20px 0 0 0;
+			margin-left: 44px
+		}
+		
+		.white_input {
+			border: 1px solid #cecece;
+		    box-shadow: 0 0 2px #cecece inset;
+		    -webkit-box-shadow: 0 0 2px #cecece inset;
+		    -moz-box-shadow: 0 0 2px #cecece inset;
+		}
+		
+		.clear-filter {
+			color: #666;
+			cursor: pointer;
+		}
+		
+		ol.open_list .list_box.js-accordionContent{
+			max-height: 0;
+			-webkit-transition: all 200ms ease;
+			-moz-transition: all 200ms ease;
+			-ms-transition: all 200ms ease;
+			-o-transition: all 200ms ease;
+			transition: all 200ms ease;	  
+			color: transparent;
+			margin: 0;			
+		    margin-left: -20px;
+		    overflow: hidden;
+		    padding-left: 20px;
+		}
+		
+		ol.open_list .js-accordionOpen.open+.list_box.js-accordionContent{
+			max-height: 10000px;
+			color: #006fb8;		
+			margin-top: 20px;
+			
+			li {
+				position: relative;
+				
+				&:before {
+				    content: '\25CF';
+				    color: #67bd4a;
+				    font: 1.2em/1 "Calibri", Arial, sans-serif;
+				    position: absolute;
+				    top: -2px;
+				    left: -20px;
+				}
+			}
+		}	
+		
+		
+		
+		#questions ol > li{
+			list-style: none;
+	    	position: relative;
+			counter-increment: item;
+	    	
+	    	&:before {
+			    content: counter(item) ".";
+			    position: absolute;
+			    top: 0;
+			    color: #006fb8;
+			    font: 1em/1 "Calibri-Bold", Arial, sans-serif;
+			    font-weight: bold;
+			    left: -35px;
+			}    	
+		}	
+	
+		ol.open_list .open_title {
+		    margin: 0;
+		}
+	}
+	
+	
+}

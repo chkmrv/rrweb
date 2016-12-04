@@ -1,0 +1,169 @@
+.css_main .calendar-news {
+	display: inline-block;
+	width: 100%;
+	padding: 0 10px 10px;
+}
+
+.css_main .calendar-news .text {
+	display: inline-block;
+	vertical-align: middle;
+	color: #353535;
+	font-size: 16px;
+	line-height: 30px;
+}
+
+.css_main .calendar-news .dateInput {
+	display: inline-block;
+	width: 105px;
+	height: 30px;
+	line-height: 30px;
+	outline: none;
+	border: 0;
+	font-size: 16px;
+	color: #7d7d7d;
+	box-shadow: none;
+	border-radius: 0px;
+	border-bottom: 1px solid #7d7d7d;
+}
+.dateInput {
+	display: inline-block;
+	width: 105px;
+	height: 30px;
+	line-height: 30px;
+	outline: none;
+	border: 0;
+	font-size: 16px;
+	color: #7d7d7d;
+	box-shadow: none;
+	border-radius: 0px;
+	border-bottom: 1px solid #7d7d7d;
+}
+.css_main .calendar-news .search-btn {
+	display: inline-block;
+	background: url(/rrwebTemplate1lvl-theme/images/sprite.png) -201px -197px no-repeat;
+	display: inline-block;
+    vertical-align: text-bottom;
+    text-decoration: none;
+    cursor:pointer;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 10px;
+}
+
+.css_main .calendar-news .clean-btn {
+	display: inline-block;
+	border-bottom: 1px dashed #0077be;
+	color: #0077be;
+	text-decoration: none;
+	font-size: 16px;
+	display: none;
+	margin-left: 20px;
+	cursor:pointer;
+}
+
+
+.ui-datepicker, .css_main .datepiker_year_select {
+  font: normal 15px/1.4 "Calibri", Arial, sans-serif;
+  background: #fff;
+  color: #000;
+  border: 1px solid #acacac;
+}
+
+.ui-datepicker .ui-datepicker-header, .css_main .datepiker_year_select .ui-datepicker-header {
+  position: relative;
+  padding: 10px 50px;
+  border-bottom: 3px solid #006fb8;
+}
+
+.ui-datepicker .ui-datepicker-title, .css_main .datepiker_year_select .ui-datepicker-title {
+  font: normal 16px/1.4 "Calibri", Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next, .css_main .datepiker_year_select .ui-datepicker-prev, .css_main .datepiker_year_select .ui-datepicker-next {
+  font: normal 18px/1 "Calibri-Bold", Arial, sans-serif;
+  color: #006fb8;
+  position: absolute;
+  top: 8px;
+}
+
+.ui-datepicker .ui-datepicker-prev, .css_main .datepiker_year_select .ui-datepicker-prev {
+  left: 30px;
+}
+
+.ui-datepicker .ui-datepicker-next, .css_main .datepiker_year_select .ui-datepicker-next {
+  right: 30px;
+}
+
+.ui-datepicker table.ui-datepicker-calendar, .css_main .datepiker_year_select table.ui-datepicker-calendar {
+  border-spacing: 0;
+  width: 100%;
+}
+
+.ui-datepicker table.ui-datepicker-calendar th, .css_main .datepiker_year_select table.ui-datepicker-calendar th {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  font: normal 1em/1.4 "Calibri", Arial, sans-serif;
+  background: #ebebeb;
+  border-left: 1px solid #e1e1e1;
+  color: #000;
+}
+
+.ui-datepicker table.ui-datepicker-calendar td, .css_main .datepiker_year_select table.ui-datepicker-calendar td {
+  text-align: center;
+  font: normal 1em/1.4 "Calibri", Arial, sans-serif;
+  border-left: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.ui-datepicker table.ui-datepicker-calendar td.ui-datepicker-today a, .css_main .datepiker_year_select table.ui-datepicker-calendar td.ui-datepicker-today a {
+  background: #67bd4a;
+  color: #fff;
+}
+
+.ui-datepicker table.ui-datepicker-calendar a, .css_main .datepiker_year_select table.ui-datepicker-calendar a {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+.ui-datepicker table.ui-datepicker-calendar a.ui-state-active, .css_main .datepiker_year_select table.ui-datepicker-calendar a.ui-state-active {
+  color: #67bd4a;
+}
+.ui-datepicker table.ui-datepicker-calendar td.ui-state-disabled  {
+  padding: 10px;
+  background: #efefef;
+}
+
+
+@media (min-width: 760px) {
+  .ui-datepicker, .css_main .datepiker_year_select {
+    font: normal 10px/1.4 "Calibri", Arial, sans-serif;
+  }
+  .ui-datepicker table.ui-datepicker-calendar th, .css_main .datepiker_year_select table.ui-datepicker-calendar th {
+    padding: 5px;
+  }
+  .ui-datepicker table.ui-datepicker-calendar a, .css_main .datepiker_year_select table.ui-datepicker-calendar a {
+    padding: 5px;
+  }
+}
+
+@media (min-width: 980px) {
+  .ui-datepicker, .css_main .datepiker_year_select {
+    font: normal 15px/1.4 "Calibri", Arial, sans-serif;
+  }
+  .ui-datepicker table.ui-datepicker-calendar th, .css_main .datepiker_year_select table.ui-datepicker-calendar th {
+    padding: 5px 10px;
+  }
+
+  .css_main .ui-datepicker table.ui-datepicker-calendar a,
+  .css_main .ui-datepicker table.ui-datepicker-calendar td.ui-state-disabled,
+  .css_main .datepiker_year_select table.ui-datepicker-calendar a {
+    padding: 10px;
+  }
+}
+
+
+

@@ -1,0 +1,163 @@
+[
+    {
+        "id": 1,
+        "discription": "Аренда земли",
+        "maxtime": "10",
+        "payment": [
+            {"title": "Для земель сельхоз. назначения",
+                "private":"350 руб",
+                "legal": "600 руб"
+            },
+            {"title": "Для земель иного назначения:",
+                "private":"2 000 руб",
+                "legal": "22 000 руб"
+            }
+        ],
+        "link": "https://rosreestr.ru/wps/portal/cc_ib_office",
+        "operationIds": [1],
+        "objectIds": [5]
+    },
+    {
+        "id": 2,
+        "discription": "Аренда нежелых помещений",
+        "maxtime": "10",
+        "payment": [
+            {   "private":"2 000 руб",
+                "legal": "22 000 руб"
+            }
+        ],
+        "link": "https://rosreestr.ru/wps/portal/cc_ib_office",
+        "operationIds": [1],
+        "objectIds": [6]
+    },
+    {
+        "id": 3,
+        "discription": "Внесение изменений в ЕГРП",
+        "maxtime": "10",
+        "payment": [
+            {   "private":"350 руб",
+                "legal": "1 000 руб"
+            }
+        ],
+        "link": "https://rosreestr.ru/wps/portal/cc_ib_office",
+        "operationIds": [7],
+        "objectIds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    },
+    {
+        "id": 4,
+        "discription": "Дарение",
+        "maxtime": "10",
+        "payment": [
+            {   "private":"2 000 руб",
+                "legal": "22 000 руб"
+            }
+        ],
+        "link": "https://rosreestr.ru/wps/portal/cc_ib_office",
+        "operationIds": [4],
+        "objectIds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    },
+    {
+        "id": 5,
+        "discription": "Наследование (квартира)",
+        "maxtime": "10",
+        "payment": [
+            {   "private":"2 000 руб",
+                "legal": "22 000 руб"
+            }
+        ],
+        "link": "https://rosreestr.ru/wps/portal/cc_ib_office",
+        "operationIds": [12],
+        "objectIds": [1, 2]
+    },
+    {
+        "id": 6,
+        "discription": "Наследование (земельный участок)",
+        "maxtime": "10",
+        "payment": [
+            {   "private":"100 - 2 000 руб",
+                "legal": "100 - 22 000 руб"
+            }
+        ],
+        "link": "https://rosreestr.ru/wps/portal/cc_ib_office",
+        "operationIds": [12],
+        "objectIds": [5]
+    },
+    {
+        "id": 7,
+        "discription": "Отказ от прав собственности",
+        "maxtime": "10",
+        "payment": [
+            {   "private":"0 руб",
+                "legal": "0 руб"
+            }
+        ],
+        "link": "https://rosreestr.ru/wps/portal/cc_ib_office",
+        "operationIds": [13],
+        "objectIds": [5]
+    },
+    {
+        "id": 8,
+        "discription": "Покупка - продажа",
+        "maxtime": "10",
+        "payment": [
+            {   "private":"2 000 руб",
+                "legal": "22 000 руб"
+            }
+        ],
+        "link": "https://rosreestr.ru/wps/portal/cc_ib_office",
+        "operationIds": [5],
+        "objectIds": [1, 2, 3, 4]
+    },
+    {
+        "id": 9,
+        "discription": "Кадастровый учет изменений объекта недвижимости",
+        "maxtime": "до 13",
+        "payment": [
+            {   "private":"0 руб",
+                "legal": "0 руб"
+            }
+        ],
+        "link": "https://rosreestr.ru/wps/portal/cc_ib_office",
+        "operationIds": [17],
+        "objectIds": [5, 8, 13]
+    },
+    {
+        "id": 10,
+        "discription": "Исправление технических ошибок в ГКН",
+        "maxtime": "от 5 до 10",
+        "payment": [
+            {   "private":"0 руб",
+                "legal": "0 руб"
+            }
+        ],
+        "link": "https://rosreestr.ru/wps/portal/cc_ib_office",
+        "operationIds": [19],
+        "objectIds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    },
+    {
+        "id": 11,
+        "discription": "Постановка на государственный кадастровый учет",
+        "maxtime": "10",
+        "payment": [
+            {   "private":"0 руб",
+                "legal": "0 руб"
+            }
+        ],
+        "link": "https://rosreestr.ru/wps/portal/cc_ib_office",
+        "operationIds": [16],
+        "objectIds": [5]
+    },
+    {
+        "id": 12,
+        "discription": "Запрос сведений ГКН",
+        "maxtime": "до 15",
+        "payment": [
+            {   "private":"от 50 до 800 руб",
+                "legal": "от 100 до 2400 руб"
+            }
+        ],
+        "link": "https://rosreestr.ru/wps/portal/cc_ib_office",
+        "operationIds": [20],
+        "objectIds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    }
+]
